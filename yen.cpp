@@ -7,7 +7,7 @@ using namespace std;
 
 // iPair ==>  Integer Pair 
 typedef pair<int, int> iPair; 
-typedef pair<int, vector<int>> vPair;
+typedef pair<int, vector<int> > vPair;
 
 // This class represents a directed graph using 
 // adjacency list representation 
@@ -39,7 +39,8 @@ public:
     void delEdge(int u, int v){
     // Traversing through the first vector list 
     // and removing the second element from it 
-        for ( auto it = adj[u].begin(); it != adj[u].end();) { 
+        for ( auto it = adj[u].begin(); it != adj[u].end(); it++) { 
+            cout << "it->first =" << it->first <<"\n";
             if (it->first == v) { 
                 it = adj[u].erase(it); 
                 break; 
@@ -47,7 +48,8 @@ public:
         } 
         // Traversing through the second vector list 
         // and removing the first element from it 
-        for ( auto it = adj[v].begin(); it != adj[v].end();) { 
+        for ( auto it = adj[v].begin(); it != adj[v].end(); it++) { 
+            cout << "(second):it->first =" << it->first <<"\n";
             if (it->first == u) { 
                 it = adj[v].erase(it); 
                 break; 
@@ -149,17 +151,26 @@ vector<int> slicing(vector<int>& arr, int X, int Y) {
     return result; 
 } 
 
+// helped function for printing
+void print(std::vector <int> const &a) {
+   std::cout << "The vector elements are : ";
+
+   for(int i=0; i < a.size(); i++)
+   std::cout << a.at(i) << ' ';
+   std::cout << "\n";
+}
+
 // psudocode: https://en.wikipedia.org/wiki/Yen%27s_algorithm
-vector<vector<int>> yen(Graph g, int s, int d, int K) {
+vector<vector<int> > yen(Graph g, int s, int d, int K) {
     // Determine the shortest path from the s to the d
-    vector<vector<int>> A;
+    vector<vector<int> > A;
     Graph g_copy = g;
     // apply dijkstra
     vector<int> path = g_copy.dijkstra(s, d);
     vector<int> original_dis = g_copy.dist;
     A.push_back(path);
     // Initialize the set to store the potential kth shortest path.
-    priority_queue<vPair, vector<vPair>, greater<vPair>> B;
+    priority_queue<vPair, vector<vPair>, greater<vPair> > B;
     
     for (int k=1; k<=K; k++){
         // The spur node ranges from the first node to the next to last node in the previous k-shortest path
@@ -169,11 +180,13 @@ vector<vector<int>> yen(Graph g, int s, int d, int K) {
             // The sequence of nodes from the source to the spur node of the previous k-shortest path
             vector<int> rootPath = slicing(A[k-1], 0, i);
             // for each path p in A
-            for (int i = 0; i < A.size(); i++) { 
-                vector<int> p = A[i];
+            for (int j = 0; j < A.size(); j++) { 
+                vector<int> p = A[j];
                 if (rootPath == slicing(p, 0, i)) {
                     // Remove the links that are part of the previous shortest paths which share the same root path
-                    g_copy.delEdge(i, i+1);
+		    cout << "rootPath = slicing\n";
+                    g_copy.delEdge(A[k-1][i], A[k-1][i+1]);
+		    cout << "deleted\n";
                 }
             }
             // for each node rootPathNode in rootPath except spurNode:
@@ -184,15 +197,20 @@ vector<vector<int>> yen(Graph g, int s, int d, int K) {
             
             vector<int> spurPath = g_copy.dijkstra(spurNode, d);
             int spur_dis = g_copy.dist[d];
+            cout << "i:" << i << "; spur_dist = " << spur_dis;
             
             // Entire path is made up of the root path and spur path
             vector<int> totalPath = rootPath;
+	    cout << "Printing before\n";
+	    print(totalPath);
             totalPath.insert(totalPath.end(), spurPath.begin(), spurPath.end());
+	    cout << "Printing after\n";
+	    print(totalPath);
             // Add the potential k-shortest path to the heap
             if (B.empty()){
                 B.push(make_pair(original_dis[i]+spur_dis, totalPath));
             }
-            priority_queue<vPair, vector<vPair>, greater<vPair>> temp = B;         
+            priority_queue<vPair, vector<vPair>, greater<vPair> > temp = B;         
             while (!temp.empty()) {
                 vPair dis_path = temp.top();      
                 if (dis_path.second == totalPath){
