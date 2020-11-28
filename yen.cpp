@@ -39,7 +39,7 @@ public:
     void delEdge(int u, int v){
     // Traversing through the first vector list 
     // and removing the second element from it 
-        for ( auto it = adj[u].begin(); it != adj[u].end();) { 
+        for ( auto it = adj[u].begin(); it != adj[u].end(); it++) { 
             if (it->first == v) { 
                 it = adj[u].erase(it); 
                 break; 
@@ -47,7 +47,7 @@ public:
         } 
         // Traversing through the second vector list 
         // and removing the first element from it 
-        for ( auto it = adj[v].begin(); it != adj[v].end();) { 
+        for ( auto it = adj[v].begin(); it != adj[v].end(); it++) { 
             if (it->first == u) { 
                 it = adj[v].erase(it); 
                 break; 
@@ -156,7 +156,7 @@ vector<vector<int>> yen(Graph g, int s, int d, int K) {
     Graph g_copy = g;
     // apply dijkstra
     vector<int> path = g_copy.dijkstra(s, d);
-    vector<int> original_dis = g_copy.dist;
+    vector<int> original_dis = g.dist;
     A.push_back(path);
     // Initialize the set to store the potential kth shortest path.
     priority_queue<vPair, vector<vPair>, greater<vPair>> B;
@@ -165,17 +165,18 @@ vector<vector<int>> yen(Graph g, int s, int d, int K) {
         // The spur node ranges from the first node to the next to last node in the previous k-shortest path
         for (int i=0; i<=A[k-1].size()-2; i++){
             // Spur node is retrieved from the previous k-shortest path, k − 1
-            int spurNode = A[k-1][i+1];
+            int spurNode = A[k-1][i];
             // The sequence of nodes from the source to the spur node of the previous k-shortest path
             vector<int> rootPath = slicing(A[k-1], 0, i);
             // for each path p in A
-            for (int i = 0; i < A.size(); i++) { 
-                vector<int> p = A[i];
+            for (int j = 0; j < A.size(); j++) { 
+                vector<int> p = A[j];
                 if (rootPath == slicing(p, 0, i)) {
                     // Remove the links that are part of the previous shortest paths which share the same root path
-                    g_copy.delEdge(i, i+1);
+                    g_copy.delEdge(p[i], p[i+1]);
                 }
             }
+            
             // for each node rootPathNode in rootPath except spurNode:
             // remove rootPathNode from Graph;
             //for (int i=0; i<rootPath.size()-1; i++){               
@@ -187,24 +188,27 @@ vector<vector<int>> yen(Graph g, int s, int d, int K) {
             
             // Entire path is made up of the root path and spur path
             vector<int> totalPath = rootPath;
-            totalPath.insert(totalPath.end(), spurPath.begin(), spurPath.end());
+            totalPath.insert(totalPath.end(), spurPath.begin()+1, spurPath.end());
             // Add the potential k-shortest path to the heap
             if (B.empty()){
-                B.push(make_pair(original_dis[i]+spur_dis, totalPath));
+                B.push(make_pair(spur_dis, totalPath));
             }
-            priority_queue<vPair, vector<vPair>, greater<vPair>> temp = B;         
-            while (!temp.empty()) {
-                vPair dis_path = temp.top();      
+            priority_queue<vPair, vector<vPair>, greater<vPair>> temp;         
+            while (!B.empty()) {
+                
+                vPair dis_path = B.top();      
                 if (dis_path.second == totalPath){
                     break;
                 }   
                 else {
-                    temp.pop();
+                    temp.push(make_pair(spur_dis, totalPath));
+                    B.pop();
                 }
             }
-            if (temp.empty()){
-                B.push(make_pair(original_dis[i]+spur_dis, totalPath));
+            if (B.empty()){
+                temp.push(make_pair(spur_dis, totalPath));
             }
+            B = temp;
             // Add back the edges and nodes that were removed from the graph
             g_copy = g;
         }
@@ -216,7 +220,7 @@ vector<vector<int>> yen(Graph g, int s, int d, int K) {
             break;
         }
         // Add the lowest cost path becomes the k-shortest path
-        A[k] = B.top().second;
+        A.push_back(B.top().second);
         // In fact we should rather use shift since we are removing the first element
         B.pop();
     }
@@ -249,6 +253,10 @@ int main()
     vector<int> path = g.dijkstra(0, 4); 
     showlist(path);
     cout << "\n" << g.dist[4] << endl;
-    yen(g, 0, 4, 2);
+    vector<vector<int>> A;
+    A = yen(g, 0, 4, 2);
+    for(auto it = A.begin(); it != A.end(); ++it) 
+        showlist(*it); 
+        cout << "\n";
     return 0; 
 } 
