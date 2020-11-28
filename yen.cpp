@@ -7,7 +7,7 @@ using namespace std;
 
 // iPair ==>  Integer Pair 
 typedef pair<int, int> iPair; 
-typedef pair<int, vector<int>> vPair;
+typedef pair<int, vector<int> > vPair;
 
 // This class represents a directed graph using 
 // adjacency list representation 
@@ -150,16 +150,16 @@ vector<int> slicing(vector<int>& arr, int X, int Y) {
 } 
 
 // psudocode: https://en.wikipedia.org/wiki/Yen%27s_algorithm
-vector<vector<int>> yen(Graph g, int s, int d, int K) {
+vector<vector<int> > yen(Graph g, int s, int d, int K) {
     // Determine the shortest path from the s to the d
-    vector<vector<int>> A;
+    vector<vector<int> > A;
     Graph g_copy = g;
     // apply dijkstra
     vector<int> path = g_copy.dijkstra(s, d);
     vector<int> original_dis = g.dist;
     A.push_back(path);
     // Initialize the set to store the potential kth shortest path.
-    priority_queue<vPair, vector<vPair>, greater<vPair>> B;
+    priority_queue<vPair, vector<vPair>, greater<vPair> > B;
     
     for (int k=1; k<=K; k++){
         // The spur node ranges from the first node to the next to last node in the previous k-shortest path
@@ -193,21 +193,24 @@ vector<vector<int>> yen(Graph g, int s, int d, int K) {
             if (B.empty()){
                 B.push(make_pair(spur_dis, totalPath));
             }
-            priority_queue<vPair, vector<vPair>, greater<vPair>> temp;         
-            while (!B.empty()) {
-                
-                vPair dis_path = B.top();      
-                if (dis_path.second == totalPath){
-                    break;
-                }   
-                else {
-                    temp.push(make_pair(spur_dis, totalPath));
-                    B.pop();
-                }
+            priority_queue<vPair, vector<vPair>, greater<vPair> > temp;         
+
+            bool found = false;
+            while(!B.empty()){
+               vPair top = B.top();
+	       
+               B.pop();
+               temp.push(top);
+
+               if(top.second == totalPath && !found) {
+                  found = true;
+               }
             }
-            if (B.empty()){
-                temp.push(make_pair(spur_dis, totalPath));
-            }
+
+            if(!found) {
+               temp.push(make_pair(spur_dis, totalPath));
+	    }
+
             B = temp;
             // Add back the edges and nodes that were removed from the graph
             g_copy = g;
@@ -253,10 +256,10 @@ int main()
     vector<int> path = g.dijkstra(0, 4); 
     showlist(path);
     cout << "\n" << g.dist[4] << endl;
-    vector<vector<int>> A;
+    vector<vector<int> > A;
     A = yen(g, 0, 4, 2);
     for(auto it = A.begin(); it != A.end(); ++it) 
         showlist(*it); 
-        cout << "\n";
+        cout << "\n\n";
     return 0; 
 } 
