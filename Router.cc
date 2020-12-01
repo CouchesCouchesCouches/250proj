@@ -39,6 +39,10 @@ class Router : public cSimpleModule
         RoutingTable rtable;
         cTopology *quantumTopo; // used for Yens
 
+        // dictionary for converting node number to node name
+        typedef std::map<int, std::string> NodeNames; // nodeNumber -> nodeModuleName
+        NodeNames nnames;
+
     protected:
         virtual void initialize(int stage) override;
         virtual void handleMessage(cMessage *msg) override;
@@ -47,6 +51,8 @@ class Router : public cSimpleModule
         virtual double getQDist(int src, int dest); // return the quantum channel distance
         virtual void populateGraph(); // create and init edges for a graph
         virtual void yensTest(); // test from test.cc on github using dummy links
+        virtual void initNames(); // create the nnames dictionary
+        virtual void printNames();
 };
 
 Define_Module(Router);
@@ -251,6 +257,8 @@ void Router::initYens() {
 
        int number_of_links_total = 0;
 
+
+
        //Initialize channel weights for all existing links.
        for (int x = 0; x < quantumTopo->getNumNodes(); x++) {//Traverse through all nodes
            //For Bidirectional channels, parameters are stored in LinkOut not LinkIn.
@@ -258,8 +266,11 @@ void Router::initYens() {
                //thisNode->disable();//You can also disable nodes or channels accordingly to represent broken hardwares
                double channel_dist = quantumTopo->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->par("distance");//Get assigned distance for each channel written in .ned file
                // this is the distance of the quantum channel and our routing metric
-               EV<<"\n thisNode is "<< quantumTopo->getNode(x)->getModule()->getFullName() <<" has "<<channel_dist<<" km quantum channel distance\n";
 
+               int address = quantumTopo->getNode(x)->getModule()->par("address");
+               EV<<"\n thisNode is "<< quantumTopo->getNode(x)->getModule()->getFullName() <<" has "<<channel_dist<<" km quantum channel distance\n";
+               EV << "This node number is = "<<x<<"\n";
+               EV << "This node address is = "<<address<<"\n";
 
                EV<<quantumTopo->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName()<<"\n";
 
@@ -277,6 +288,18 @@ void Router::initYens() {
        }
        EV<<"\nDone initializing cTopology for quantum link distances\n";
     
+}
+
+void Router::initNames() {
+    for (int x = 0; x < quantumTopo->getNumNodes(); x++) {//Traverse through all nodes
+        nnames[x] = quantumTopo->getNode(x)->getModule()->getFullName();
+    }
+}
+
+void Router::printNames() {
+    for (int x = 0; x < quantumTopo->getNumNodes(); x++) {//Traverse through all nodes
+        EV << "\n";
+    }
 }
 
 // given the end nodes on a link, get the weight of the link from the topology
@@ -324,8 +347,9 @@ void Router::populateGraph() {
                for (int j = 0; j < topo2->getNode(x)->getNumOutLinks(); j++) {//Traverse through all links from a specific node.
                    //thisNode->disable();//You can also disable nodes or channels accordingly to represent broken hardwares
                    EV<<"\n thisNode is "<< topo2->getNode(x)->getModule()->getFullName() <<" has "<<topo2->getNode(x)->getNumOutLinks()<<" links \n";
-                   /*double channel_cost = topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->par("cost");//Get assigned cost for each channel written in .ned file
+                   double channel_dist = topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->par("distance");//Get assigned cost for each channel written in .ned file
 
+                   /*
                    EV<<topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName()<<" =? "<<"includes quantum?"<<"\n";
                    //if(strcmp(topo->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->getFullName(),"QuantumChannel")==0){
                    if(strstr(topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName(),"quantum")){
@@ -374,13 +398,15 @@ void Router::yensTest(){
         EV <<"\nSliced the vector from 0, 3\n";
         showlist(temp);
         // shortest path from node 0 to 4, K = 8
+
+        EV <<"Calling Yens\n";
         A = yen(g, 0, 4, 8); // simulation crashed after inputting parameters here
-        /*
+
         for(auto it = A.begin(); it != A.end(); ++it) {
             showlist(*it);
             //cout << "\n";
             EV << "\n";
-        }*/
+        }
 
 }
 
