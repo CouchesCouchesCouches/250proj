@@ -365,6 +365,14 @@ void Router::yensTest(){
         g.addEdge(7, 8, 7);
 
         vector<vector<int> > A;
+
+        vector<int> temp = {0, 1, 2, 5, 6};
+
+        for(auto it = temp.begin(); it != temp.end(); ++it)
+                EV << *it << ' ';
+        temp = slicing(temp, 0, 3);
+        EV <<"\nSliced the vector from 0, 3\n";
+        showlist(temp);
         // shortest path from node 0 to 4, K = 8
         A = yen(g, 0, 4, 8); // simulation crashed after inputting parameters here
         /*
