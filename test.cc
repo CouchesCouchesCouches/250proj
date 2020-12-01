@@ -1,4 +1,5 @@
 #include "yen.h"
+//#include "my_class.h"
 using namespace YEN;
 
 int main() 
@@ -29,7 +30,7 @@ int main()
     int cost = g.dist[4];
     cout << cost << endl;
     */
-    vector<vector<int>> A;
+    vector<vector<int> > A;
     // shortest path from node 0 to 4, K = 8
     A = yen(g, 0, 4, 8);
     for(auto it = A.begin(); it != A.end(); ++it) {

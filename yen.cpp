@@ -144,7 +144,7 @@ vector<int> slicing(vector<int>& arr, int X, int Y) {
 // psudocode: https://en.wikipedia.org/wiki/Yen%27s_algorithm
 vector<vector<int> > yen(Graph g, int s, int d, int K) {
     // Determine the shortest path from the s to the d
-    vector<vector<int>> A;
+    vector<vector<int> > A;
     //Graph g_copy = g;
     // apply dijkstra
     vector<int> path = g.dijkstra(s, d);
@@ -189,7 +189,7 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
             if (B.empty()){
                 B.push(make_pair(root_dis+spur_dis, totalPath));
             }
-            priority_queue<vPair, vector<vPair>, greater<vPair>> temp;
+            priority_queue<vPair, vector<vPair>, greater<vPair> > temp;
             bool found = false;
             while (!B.empty()) {
                 vPair dis_path = B.top();
@@ -221,8 +221,3 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
     return A;
 }
 
-// Driver program to test methods of graph class
-int main()
-{
-    return 0;
-}
