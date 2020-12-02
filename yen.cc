@@ -54,8 +54,8 @@ vector<int> Graph::findPath(int parent[], int s, int d){
     vector<int> path;
     path.push_back(d);
     int u = parent[d];
-    if(!u) {
-        u = -1;
+    if(u == -1) {
+        return path;
     }
     path.insert(path.begin(), u);
     while (u != s){
@@ -67,7 +67,6 @@ vector<int> Graph::findPath(int parent[], int s, int d){
 }
 // prints shortest path from s
 vector<int> Graph::dijkstra(int src, int des){
-    //EV <<"Entered dijkstra\n";
         // Create a priority queue to store vertices that
     // are being preprocessed. This is weird syntax in C++.
     // Refer below link for details of this syntax
@@ -88,7 +87,10 @@ vector<int> Graph::dijkstra(int src, int des){
 
     // Parent array to store shortest path
     int parent[V];
-    parent[0] = -1;
+    for (int i=0; i<V; i++){
+        parent[i] = -1;
+    }
+    //parent[0] = -1;
 
     /* Looping till priority queue becomes empty (or all
     distances are not finalized) */
@@ -147,7 +149,6 @@ vector<int> slicing(vector<int>& arr, int X, int Y) {
 
 // psudocode: https://en.wikipedia.org/wiki/Yen%27s_algorithm
 vector<vector<int> > yen(Graph g, int s, int d, int K) {
-    //EV<<"Entered yen()\n";
     // Determine the shortest path from the s to the d
     vector<vector<int> > A;
     //Graph g_copy = g;
@@ -162,7 +163,7 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
         // The spur node ranges from the first node to the next to last node in the previous k-shortest path
         for (int i=0; i<=A[k-1].size()-2; i++){
             Graph g_copy = g;
-            // Spur node is retrieved from the previous k-shortest path, k ��� 1
+            // Spur node is retrieved from the previous k-shortest path, k − 1
             int spurNode = A[k-1][i];
             int root_dis = g.dist[spurNode];
             // The sequence of nodes from the source to the spur node of the previous k-shortest path
@@ -170,7 +171,14 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
             // for each path p in A
             for (int j = 0; j < A.size(); j++) {
                 vector<int> p = A[j];
-                if (rootPath == slicing(p, 0, i)) {
+                if(A[j].size() <= i) {
+                    // does not make sense to slice so skip
+                    continue;
+                }
+                vector<int> slice = slicing(p, 0, i);
+
+                if ((slicing) && equal(rootPath.begin(), rootPath.end(), slice.begin())) {
+                //if (rootPath == slicing(p, 0, i)) {
                     // Remove the links that are part of the previous shortest paths which share the same root path
                     g_copy.delEdge(p[i], p[i+1]);
                 }
@@ -200,7 +208,7 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
                 vPair dis_path = B.top();
                 temp.push(dis_path);
                 B.pop();
-                if (dis_path.second == totalPath & !found){
+                if (dis_path.second == totalPath && !found){
                     found = true;
                 }
             }
