@@ -3,8 +3,8 @@
 
 #include "stdc++.h"
 #include <iostream>
-#include <omnetpp.h>
-using namespace omnetpp;
+//#include <omnetpp.h>
+//using namespace omnetpp;
 
 using namespace std; 
 namespace YEN {
@@ -38,8 +38,8 @@ class Graph
 //void showlist(vector<int> g);
 inline void showlist(vector<int> g) { 
     for(auto it = g.begin(); it != g.end(); ++it) 
-        EV << *it <<' ';
-        //cout << *it << ' ';
+        //EV << *it <<' ';
+        cout << *it << ' ';
 } 
 
 // helper function to slice vector from X to Y, inclusive

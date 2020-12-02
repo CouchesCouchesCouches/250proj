@@ -54,6 +54,9 @@ vector<int> Graph::findPath(int parent[], int s, int d){
     vector<int> path;
     path.push_back(d);
     int u = parent[d];
+    if(!u) {
+        u = -1;
+    }
     path.insert(path.begin(), u);
     while (u != s){
         int temp = parent[u];
@@ -64,7 +67,7 @@ vector<int> Graph::findPath(int parent[], int s, int d){
 }
 // prints shortest path from s
 vector<int> Graph::dijkstra(int src, int des){
-    EV <<"Entered dijkstra\n";
+    //EV <<"Entered dijkstra\n";
         // Create a priority queue to store vertices that
     // are being preprocessed. This is weird syntax in C++.
     // Refer below link for details of this syntax
@@ -144,7 +147,7 @@ vector<int> slicing(vector<int>& arr, int X, int Y) {
 
 // psudocode: https://en.wikipedia.org/wiki/Yen%27s_algorithm
 vector<vector<int> > yen(Graph g, int s, int d, int K) {
-    EV<<"Entered yen()\n";
+    //EV<<"Entered yen()\n";
     // Determine the shortest path from the s to the d
     vector<vector<int> > A;
     //Graph g_copy = g;
