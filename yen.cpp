@@ -54,6 +54,9 @@ vector<int> Graph::findPath(int parent[], int s, int d){
     vector<int> path;
     path.push_back(d);
     int u = parent[d];
+    if(u == -1) {
+        return path;
+    }
     path.insert(path.begin(), u);
     while (u != s){
         int temp = parent[u];
@@ -84,7 +87,10 @@ vector<int> Graph::dijkstra(int src, int des){
 
     // Parent array to store shortest path
     int parent[V];
-    parent[0] = -1;
+    for (int i=0; i<V; i++){
+        parent[i] = -1;
+    }
+    //parent[0] = -1;
 
     /* Looping till priority queue becomes empty (or all
     distances are not finalized) */
@@ -165,7 +171,14 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
             // for each path p in A
             for (int j = 0; j < A.size(); j++) {
                 vector<int> p = A[j];
-                if (rootPath == slicing(p, 0, i)) {
+                if(A[j].size() <= i) {
+                    // does not make sense to slice so skip
+                    continue;
+                }
+                vector<int> slice = slicing(p, 0, i);
+
+                if ((slicing) && equal(rootPath.begin(), rootPath.end(), slice.begin())) {
+                //if (rootPath == slicing(p, 0, i)) {
                     // Remove the links that are part of the previous shortest paths which share the same root path
                     g_copy.delEdge(p[i], p[i+1]);
                 }
@@ -195,7 +208,7 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
                 vPair dis_path = B.top();
                 temp.push(dis_path);
                 B.pop();
-                if (dis_path.second == totalPath & !found){
+                if (dis_path.second == totalPath && !found){
                     found = true;
                 }
             }
