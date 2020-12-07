@@ -203,7 +203,7 @@ int main()
     vector<vector<int> > A;
     // shortest path from node 0 to 4, K = 8
     A = yen(g, 0, 2, 12);
-    cout << "size of A: " << A.size() << endl;
+    
     for(auto it = A.begin(); it != A.end(); ++it) {
         showlist(*it); 
         cout << "\n";
