@@ -13,7 +13,6 @@ namespace YEN {
 typedef pair<int, int> iPair; 
 typedef pair<int, vector<int> > vPair;
 
-
 class Graph 
 { 
     public:
@@ -23,6 +22,8 @@ class Graph
      
         Graph(int V); // Constructor  
         Graph(const Graph &rhs);
+
+        //void delGraph();
     
         // function to add an edge to graph 
         void addEdge(int u, int v, int w);
@@ -34,6 +35,9 @@ class Graph
         vector<int> dijkstra(int src, int des);
     };
 }
+
+// Global definition of a graph
+//extern YEN::Graph aGraph;
 
 //void showlist(vector<int> g);
 inline void showlist(vector<int> g) { 

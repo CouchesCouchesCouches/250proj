@@ -12,6 +12,9 @@ using namespace std;
 typedef pair<int, int> iPair;
 typedef pair<int, vector<int> > vPair;
 
+// Global definition of a graph
+//Graph aGraph(15);
+
 // This class represents a directed graph using
 // adjacency list representation
 
@@ -25,6 +28,15 @@ Graph::Graph(const Graph &rhs) { /* copy construction from rhs*/
     dist = rhs.dist;
 }
 
+/*
+void Graph::delGraph() {
+    for(int i = 0; i < V; i++) {
+        while(!adj[i].empty()) {
+            adj[i].pop_front();
+        }
+    }
+}*/
+
 // function to add an edge to graph
 void Graph::addEdge(int u, int v, int w) {
     adj[u].push_back(make_pair(v, w));
@@ -32,8 +44,8 @@ void Graph::addEdge(int u, int v, int w) {
 }
 
 void Graph::delEdge(int u, int v){
-// Traversing through the first vector list
-// and removing the second element from it
+    // Traversing through the first vector list
+    // and removing the second element from it
     for ( auto it = adj[u].begin(); it != adj[u].end(); it++) {
         if (it->first == v) {
             it = adj[u].erase(it);
@@ -49,6 +61,7 @@ void Graph::delEdge(int u, int v){
         }
     }
 }
+
 
 vector<int> Graph::findPath(int parent[], int s, int d){
     vector<int> path;
