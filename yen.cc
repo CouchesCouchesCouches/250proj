@@ -248,5 +248,6 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
         // In fact we should rather use shift since we are removing the first element
         B.pop();
     }
+    cout << "size of A: " << A.size() << endl;
     return A;
 }
