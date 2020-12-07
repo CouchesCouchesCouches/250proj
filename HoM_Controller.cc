@@ -7,6 +7,9 @@
  *  \brief HoM_Controller
  */
 #include "HoM_Controller.h"
+#include "globals.h"
+#include "yen.h"
+using namespace YEN;
 
 namespace quisp {
 namespace modules {
@@ -125,18 +128,13 @@ void HoM_Controller::handleMessage(cMessage *msg){
         BSAresult *pk = check_and_cast<BSAresult *>(msg);
 		bool entangled = pk->getEntangled();
 		//std::cout<<"Accumulating "<<entangled<<"\n";
+
         int prev = getStoredBSAresultsSize();
         pushToBSAresults(entangled);
         int aft = getStoredBSAresultsSize();
 		if(prev+1 != aft){
 			error("Nahnah nah!");
 		}
-
-		int totalEntangled = entangledCount();
-		EV <<"****************************************************************\n";
-        EV << "BSAresult::The width of this channel at BSA result is = " << totalEntangled << "\n";
-        EV <<"****************************************************************\n";
-	
         /*if(getStoredBSAresultsSize() == max_buffer && handshake==true){
             bubble("All results stored!");
             sendBSAresultsToNeighbors();
@@ -149,16 +147,17 @@ void HoM_Controller::handleMessage(cMessage *msg){
         bubble("BSAresult accumulated");
         BSAfinish *pk = check_and_cast<BSAfinish *>(msg);
         pushToBSAresults(pk->getEntangled());
-        // _print contents
-        printBSAresults();
-        int totalEntangled = entangledCount();
+
         int stored = getStoredBSAresultsSize();
-        EV <<"****************************************************************\n";
-        EV << "BSAfinish::The width of this channel at BSA finish is = " << totalEntangled << "\n";
-        EV <<"****************************************************************\n";
         char moge[sizeof(stored)];
         sprintf(moge, "%d", stored);
         bubble(moge);
+
+        // Track link states of HoMs
+        setLinkState();
+
+        // Using the link states, set up end to end entanglement
+        consumeLinks();
 
         bubble("done");
         sendBSAresultsToNeighbors();//memory leak
@@ -347,7 +346,7 @@ void HoM_Controller::pushToBSAresults(bool attempt_success){
     results[getStoredBSAresultsSize()] = attempt_success;
 	int aft = getStoredBSAresultsSize();
 	if(prev+1 != aft){
-		error("Not working correctly");
+		error("BSAresults not working correctly");
 	}
 }
 int HoM_Controller::getStoredBSAresultsSize(){
@@ -404,7 +403,7 @@ void HoM_Controller::sendBSAresultsToNeighbors(){
         pkt = generateNotifier_c(time, speed_of_light_in_channel, distance_to_neighbor_two, neighbor_address_two, accepted_burst_interval,photon_detection_per_sec, max_buffer);
         double second_nodes_timing = calculateEmissionStartTime(time,distance_to_neighbor_two,speed_of_light_in_channel);
         pkt->setTiming_at(second_nodes_timing);//Tell neighboring nodes to shoot photons so that the first one arrives at BSA at the specified timing
-        EV<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!list of failed size = "<<getStoredBSAresultsSize()<<"\n";
+        //EV<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!list of failed size = "<<getStoredBSAresultsSize()<<"\n";
         pkt->setSrcAddr(address);
         pkt->setDestAddr(neighbor_address_two);
         pkt->setList_of_failedArraySize(getStoredBSAresultsSize());
@@ -440,7 +439,7 @@ void HoM_Controller::sendBSAresultsToNeighbors(){
         pkt->setList_of_failedArraySize(getStoredBSAresultsSize());
         pkt->setKind(6);
 
-        EV<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!list of failed size = "<<getStoredBSAresultsSize()<<"\n";
+        //EV<<"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!list of failed size = "<<getStoredBSAresultsSize()<<"\n";
 
         for(auto it : results ){
            int index = it.first;
@@ -466,6 +465,124 @@ void HoM_Controller::setMax_buffer(int buffer){
         par("max_buffer") = buffer;
     }
 }
+
+// CUSTOM METHOD
+// Adds or updates a pair of node# and linkstate/width for our array
+void HoM_Controller::setLinkState() {
+    // Track link states of HoMs
+    EV << "-------------------------------------------\n";
+    int counter = 0;
+    for(auto it : results ){
+        int index = it.first;
+        bool entangled = it.second;
+        if(entangled) {
+            counter++;
+        }
+    }
+    int thisaddr = getParentModule()->par("address");
+    if(thisaddr >= 10){
+        thisaddr -= 10;
+        if(results.size() < 10){ //hard coded buffer size of whatever
+            // add counter to current HoM link state in our Global array
+            EV << " DEBUGBRO  \n";
+            HoMstates[thisaddr] += counter;
+        }
+        else{
+            // set HoM link state to counter in GLobal a
+            HoMstates[thisaddr] = counter;
+        }
+    }
+    EV << "HoM number " << thisaddr << " has link state " << counter <<"!!! \n";
+    EV << "Total attempted entanglements:  "<< results.size() << "\n";;
+    for(auto it : results ){
+        int index = it.first;
+        bool entangled = it.second;
+        EV<< entangled<<" ";
+    }
+    EV << "\nPrint out HoM link states: \n";
+        for(int i=0; i<23;i++ ){ // HARDCODED NUM OF HOMS TO 22
+            EV<<"HoM " << i<<", entangled = "<<HoMstates[i]<<"\n";
+        }
+}
+
+void HoM_Controller::consumeLinks() {
+    EV <<"\n\n****************************************************\n";
+    EV <<"******************Adding to total entanglements*****\n";
+    EV <<"****************************************************\n";
+    EV << "totalEntanglements (before) = " << totalEntanglements << "\n";
+    int thisaddr = getParentModule()->par("address");
+    thisaddr -= 10;
+    if(thisaddr == 22){
+
+        vector<vector<int> > A;
+
+        A = yen(qDGraph, 0, 2, 1); // create a vector of paths (vectors of ints)
+
+        for(auto it = A.begin(); it != A.end(); ++it) {
+                showlist(*it);
+                //cout << "\n";
+                EV << "\n";
+        }
+        int max = totalEntanglements + 10; // maximum number of entanglements to have after
+        int left_to_entangle = 10; // initially no entanglements made for this run
+        int max_width = 0;
+        int HoMaddress;
+        bool HoM_flag = false;
+        // using these paths, check the link states
+        for(auto path = A.begin(); path != A.end(); ++path) {
+            if(totalEntanglements == max) { // stop once max is reached
+                EV << max << " end to end entanglements!\nEnd...\n";
+                break;
+            }
+            for(auto node = path->begin(); node != path->end(); ++node) {
+                if(HoM_flag) {
+                    HoMaddress = (int) *node;
+                    HoMaddress -= 10; // HoM have address into HoMstates = address - 10
+                    EV << "HoMstates[" << HoMaddress << "] = " << HoMstates[HoMaddress] << "\n";
+                    // check max_width along entire path and then decrement all by max_width
+                    if(HoMstates[HoMaddress] > max_width) {
+                        max_width = HoMstates[HoMaddress];
+                    }
+                    HoM_flag = false;
+                }
+                else {//skip non HoM nodes
+                    HoM_flag = true;
+                }
+            }
+            HoM_flag = false;
+            if(max_width != 0) {
+                // check if max_width is bigger than we need
+                if(max_width > left_to_entangle) {
+                    max_width = left_to_entangle;
+                }
+                // decrement the widths
+                for(auto node = path->begin(); node != path->end(); ++node) {
+                    if(HoM_flag) {
+                        HoMaddress = (int) *node;
+                        HoMaddress -= 10; // HoM have address into HoMstates = address - 10
+                        //EV << "HoMstates[" << HoMaddress << "] = " << HoMstates[HoMaddress] << "\n";
+                        // check max_width along entire path and then decrement all by max_width
+                        HoMstates[HoMaddress] -= max_width;
+                        HoM_flag = false;
+                    }
+                    else {//skip non HoM nodes
+                        HoM_flag = true;
+                    }
+                }
+                // debug print statements: show which path we just added to
+                EV << "Successfully used " << max_width << " links along path:";
+                showlist(*path);
+                totalEntanglements += max_width; // add to total successful entanglements
+                left_to_entangle -= max_width;
+                max_width = 0;
+                HoM_flag = false;
+            }
+        }
+    }
+    //EV << "totalEntanglements (after) = " << totalEntanglements << "\n";
+    return;
+}
+
 /*
 void HoM_Controller::finish(){
 

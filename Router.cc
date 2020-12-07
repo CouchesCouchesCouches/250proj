@@ -19,6 +19,7 @@ We will run Yen's algorithm on this graph
 #include "yen.h"
 using namespace YEN;
 //#include <iostream>
+#include "globals.h"
 
 using namespace omnetpp;
 using namespace quisp::messages;
@@ -38,21 +39,20 @@ class Router : public cSimpleModule
         typedef std::map<int, int> RoutingTable;  // destaddr -> gateindex
         RoutingTable rtable;
         cTopology *quantumTopo; // used for Yens
-
-        // dictionary for converting node number to node name
-        typedef std::map<int, std::string> NodeNames; // nodeNumber -> nodeModuleName
-        NodeNames nnames;
+        typedef std::map<int, int> AddressTranslator;  // address -> nodeNumber
+        //AddressTranslator //;
+        //Graph aGraph(15);
 
     protected:
         virtual void initialize(int stage) override;
         virtual void handleMessage(cMessage *msg) override;
         virtual int numInitStages() const override {return 1;};
-        virtual void initYens(); // initializes the yens_paths
-        virtual double getQDist(int src, int dest); // return the quantum channel distance
+        virtual void initQTopo(); // create the topology
+        //virtual void initAddrTrans(); // create address translation map
+        //virtual void initYens(); // initializes the yens_paths
+        virtual void printInfo(); // print some stats about the graph
         virtual void populateGraph(); // create and init edges for a graph
         virtual void yensTest(); // test from test.cc on github using dummy links
-        virtual void initNames(); // create the nnames dictionary
-        virtual void printNames();
 };
 
 Define_Module(Router);
@@ -63,10 +63,17 @@ void Router::initialize(int stage)
        myAddress = getParentModule()->par("address");
 
        // test yens algorithm first
-       yensTest();
-       // create graph used for Yen's algorithm
-       initYens();
-       populateGraph();
+       //yensTest(); // it works so commented out !!
+
+       if(myAddress == 0 or myAddress == 10000000) {
+           // only do this once -> node 0 defined to do this
+           //initYens(); // create graph used for Yen's algorithm
+           //aGraph.delGraph();
+           EV<<"Initializing global things in address = 0\n";
+           printInfo();
+           populateGraph(); // populate the graph g used for Yen's
+           yensTest();
+       }
 
        //Topology creation for routing table
        cTopology *topo = new cTopology("topo");
@@ -87,19 +94,20 @@ void Router::initialize(int stage)
            //For Bidirectional channels, parameters are stored in LinkOut not LinkIn.
            for (int j = 0; j < topo->getNode(x)->getNumOutLinks(); j++) {//Traverse through all links from a specific node.
                //thisNode->disable();//You can also disable nodes or channels accordingly to represent broken hardwares
-               EV<<"\n thisNode is "<< topo->getNode(x)->getModule()->getFullName() <<" has "<<topo->getNode(x)->getNumOutLinks()<<" links \n";
+               //EV<<"\n thisNode is "<< topo->getNode(x)->getModule()->getFullName() <<" has "<<topo->getNode(x)->getNumOutLinks()<<" links \n";
                double channel_cost = topo->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->par("cost");//Get assigned cost for each channel written in .ned file
 
-               EV<<topo->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName()<<" =? "<<"includes quantum?"<<"\n";
+               //EV<<"otherNode = "<<topo->getNode(x)->getLinkOut(j)->getRemoteNode()->getModule()->getFullName()<<"\n";
+               //EV<<topo->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName()<<" =? "<<"includes quantum?"<<"\n";
                //if(strcmp(topo->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->getFullName(),"QuantumChannel")==0){
                if(strstr(topo->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName(),"quantum")){
                    //Ignore quantum link in classical routing table
-                   EV<<"\n Disable quantum from topo \n";
+                   //EV<<"\n Disable quantum from topo \n";
                    topo->getNode(x)->getLinkOut(j)->disable();
                }else{
                    //Otherwise, keep the classical channels and set the weight
                    topo->getNode(x)->getLinkOut(j)->setWeight(channel_cost);//Set channel weight
-                   EV<<"\n Including classical channel link cost = "<< topo->getNode(x)->getLinkOut(j)->getWeight()<<": "<<topo->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->getFullName()<<"\n";
+                   //EV<<"\n Including classical channel link cost = "<< topo->getNode(x)->getLinkOut(j)->getWeight()<<": "<<topo->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->getFullName()<<"\n";
                }
            }
        }
@@ -118,12 +126,12 @@ void Router::initialize(int stage)
                int gateIndex = parentModuleGate->getIndex();
                int address = topo->getNode(i)->getModule()->par("address");
                rtable[address] = gateIndex;//Store gate index per destination from this node
-               EV <<"\n  Classical!!!!: Towards address " << address <<"("<< topo->getNode(i)->getModule()->getName() << ")"<<parentModuleGate->getFullName()<<"gateIndex is " << gateIndex << "cost ="<< thisNode->getPath(0)->getWeight() << endl;
+               //EV <<"\n  Classical!!!!: Towards address " << address <<"("<< topo->getNode(i)->getModule()->getName() << ")"<<parentModuleGate->getFullName()<<"gateIndex is " << gateIndex << "cost ="<< thisNode->getPath(0)->getWeight() << endl;
 
                if(strstr(parentModuleGate->getFullName(),"quantum")){
                    error("Classical routing table referring to quantum gates...");
                }
-               EV << "\n  Towards address " << address <<"("<< topo->getNode(i)->getModule()->getName() << ") gateIndex is " << gateIndex << endl;
+               //EV << "\n  Towards address " << address <<"("<< topo->getNode(i)->getModule()->getName() << ") gateIndex is " << gateIndex << endl;
       }
 
       delete topo;
@@ -241,26 +249,24 @@ void Router::handleMessage(cMessage *msg)
         send(pk, "toQueue", outGateIndex);
 }
 
-void Router::initYens() {
-       EV<<"\nInitializing cTopology for quantum link distances\n";
-       //Topology creation quantum links
-       quantumTopo = new cTopology("quantumTopo");
-       cMsgPar *yes = new cMsgPar();
-       yes->setStringValue("yes");
-       quantumTopo->extractByParameter("includeInTopo",yes->str().c_str());//Any node that has a parameter includeInTopo will be included in routing
-       delete(yes);
-       if(quantumTopo->getNumNodes()==0 || quantumTopo==nullptr){//If no node with the parameter & value found, do nothing.
+void Router::initQTopo() {
+        EV<<"\nInitializing cTopology for quantum link distances\n";
+        //Topology creation quantum links
+        quantumTopo = new cTopology("quantumTopo");
+        cMsgPar *yes = new cMsgPar();
+        yes->setStringValue("yes");
+        quantumTopo->extractByParameter("includeInTopo",yes->str().c_str());//Any node that has a parameter includeInTopo will be included in routing
+        delete(yes);
+        if(quantumTopo->getNumNodes()==0 || quantumTopo==nullptr){//If no node with the parameter & value found, do nothing.
                 return;
-       }
+        }
 
-       cTopology::Node *thisNode = quantumTopo->getNodeFor(getParentModule());//The parent node with this specific router
+        cTopology::Node *thisNode = quantumTopo->getNodeFor(getParentModule());//The parent node with this specific router
 
-       int number_of_links_total = 0;
+        int number_of_links_total = 0;
 
-
-
-       //Initialize channel weights for all existing links.
-       for (int x = 0; x < quantumTopo->getNumNodes(); x++) {//Traverse through all nodes
+        //Initialize channel weights for all existing links.
+        for (int x = 0; x < quantumTopo->getNumNodes(); x++) {//Traverse through all nodes
            //For Bidirectional channels, parameters are stored in LinkOut not LinkIn.
            for (int j = 0; j < quantumTopo->getNode(x)->getNumOutLinks(); j++) {//Traverse through all links from a specific node.
                //thisNode->disable();//You can also disable nodes or channels accordingly to represent broken hardwares
@@ -285,129 +291,143 @@ void Router::initYens() {
                    quantumTopo->getNode(x)->getLinkOut(j)->disable();
                }
            }
-       }
-       EV<<"\nDone initializing cTopology for quantum link distances\n";
+        }
+        EV<<"\nDone initializing cTopology for quantum link distances\n";
     
 }
-
-void Router::initNames() {
-    for (int x = 0; x < quantumTopo->getNumNodes(); x++) {//Traverse through all nodes
-        nnames[x] = quantumTopo->getNode(x)->getModule()->getFullName();
+/*
+void Router::initAddrTrans(){
+    EV<<"|||Initializing Address Table|||\n";
+    cTopology *topo2 = new cTopology("topo2");
+    cMsgPar *yes = new cMsgPar();
+    yes->setStringValue("yes");
+    topo2->extractByParameter("includeInTopo",yes->str().c_str());//Any node that has a parameter includeInTopo will be included in routing
+    delete(yes);
+    if(topo2->getNumNodes()==0 || topo2==nullptr){//If no node with the parameter & value found, do nothing.
+            return;
     }
-}
-
-void Router::printNames() {
-    for (int x = 0; x < quantumTopo->getNumNodes(); x++) {//Traverse through all nodes
-        EV << "\n";
+    //Initialize channel weights for all existing links.
+    for (int x = 0; x < topo2->getNumNodes(); x++) {//Traverse through all nodes
+       int address = topo2->getNode(x)->getModule()->par("address");
+       EV << "Mapping " << address << " to " << x << "\n";
+       aTrans[address] = x;
     }
-}
+}*/
 
-// given the end nodes on a link, get the weight of the link from the topology
-double Router::getQDist(int src, int dest) {
-    EV<<"Computing distance***\n";
-    EV<<"Source: "<<quantumTopo->getNode(src)->getModule()->getFullName()<<"\n";
-    EV<<"Destination name: "<<quantumTopo->getNode(src)->getLinkOut(dest)->getLocalGate()->getFullName()<<"\n";
-    EV<<"Weight of link: "<< quantumTopo->getNode(src)->getLinkOut(dest)->getWeight()<<"\n";
+void Router::printInfo() {
+    EV<<"|||Printing Information on the graph|||\n";
+    cTopology *topo2 = new cTopology("topo2");
+    cMsgPar *yes = new cMsgPar();
+    yes->setStringValue("yes");
+    topo2->extractByParameter("includeInTopo",yes->str().c_str());//Any node that has a parameter includeInTopo will be included in routing
+    delete(yes);
+    if(topo2->getNumNodes()==0 || topo2==nullptr){//If no node with the parameter & value found, do nothing.
+            return;
+    }
+    //Initialize channel weights for all existing links.
+    for (int x = 0; x < topo2->getNumNodes(); x++) {//Traverse through all nodes
+       EV<<"\nthisNode is "<< topo2->getNode(x)->getModule()->getFullName() <<" has "<<topo2->getNode(x)->getNumOutLinks()<<" links out\n";
+       int address = topo2->getNode(x)->getModule()->par("address");
+       EV<<"Address: " << address << "\n";
+       EV<<"Node number: " << x << "\n"; // from looping through getNumNodes;
 
-    return quantumTopo->getNode(src)->getLinkOut(dest)->getWeight();
+       /*
+       AddressTranslator::iterator it = aTrans.find(address);
+       int translation = (*it).second;
+       EV<<"aTrans[address]: " << translation <<"\n";
+       // probably just use this as the vertex number in the graph
+        *
+        */
+       EV<<"Module ID:"<<topo2->getNode(x)->getModuleId()<<"\n";
+    }
 }
 
 // populate a graph's edges
 void Router::populateGraph() {
-    /*
-    EV<<"Populating the graph\n";
-    for (int x = 0; x < quantumTopo->getNumNodes(); x++) {//Traverse through all nodes
-        for (int y = 0; y < quantumTopo->getNode(x)->getNumOutLinks(); y++) {//Traverse through all edges
-            if(x != y and (strstr(quantumTopo->getNode(x)->getLinkOut(y)->getLocalGate()->getFullName(),"quantum"))) {
-                double weight = getQDist(x,y);
-                EV << "Add edge from node "<<x<<" to node "<<y<<" with weight: "<<weight<<"\n";
-                //g.addEdge(x, y, weight);
-            }
-        }
+    //Create the graph built from the topology using weights as quantum channel distances
+    EV <<"Populating graph of quantum channel distances\n";
+    cTopology *topo2 = new cTopology("topo2");
+    cMsgPar *yes = new cMsgPar();
+    yes->setStringValue("yes");
+    topo2->extractByParameter("includeInTopo",yes->str().c_str());//Any node that has a parameter includeInTopo will be included in routing
+    delete(yes);
+    if(topo2->getNumNodes()==0 || topo2==nullptr){//If no node with the parameter & value found, do nothing.
+            return;
     }
-    */
-    //Topology creation for routing table
-    EV <<"Trying to find QNodes...\n";
-           cTopology *topo2 = new cTopology("topo2");
-           cMsgPar *yes = new cMsgPar();
-           yes->setStringValue("yes");
-           topo2->extractByParameter("includeInTopo",yes->str().c_str());//Any node that has a parameter includeInTopo will be included in routing
-           delete(yes);
-           if(topo2->getNumNodes()==0 || topo2==nullptr){//If no node with the parameter & value found, do nothing.
-                    return;
+
+    cTopology::Node *thisNode = topo2->getNodeFor(getParentModule());//The parent node with this specific router
+
+    int number_of_links_total = 0;
+
+    int V = topo2->getNumNodes();
+
+    //Initialize channel weights for all existing links.
+    for (int x = 0; x < topo2->getNumNodes(); x++) {//Traverse through all nodes
+       //For Bidirectional channels, parameters are stored in LinkOut not LinkIn.
+       for (int j = 0; j < topo2->getNode(x)->getNumOutLinks(); j++) {//Traverse through all links from a specific node.
+           //EV<<"\nthisNode is "<< topo2->getNode(x)->getModule()->getFullName() <<" has "<<topo2->getNode(x)->getNumOutLinks()<<" links out\n";
+
+           int address = topo2->getNode(x)->getModule()->par("address");
+           EV<<"my address = " << address << "\n";
+           EV<<"Node number: " << x << "\n"; // from looping through getNumNodes;
+
+           EV<<"neighborNode is "<< topo2->getNode(x)->getLinkOut(j)->getRemoteNode()->getModule()->getFullName() <<"\n";
+
+           int neighbor_address =  topo2->getNode(x)->getLinkOut(j)->getRemoteNode()->getModule()->par("address");
+           EV<<"neighbor address = " << neighbor_address << "\n";
+
+           int nodeNumber = neighbor_address % 10000000;
+           /*
+           if(nodeNumber >= 10000000) {
+               // this is an endnode (endnodes have address = nodeNumber + 10000000)
+               nodeNumber -= 10000000;
+           }
+           */
+           EV<<"Neighbor node number (updated): " << nodeNumber << "\n";
+
+           double channel_dist = topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->par("distance");//Get assigned cost for each channel written in .ned file
+           EV<<"distance = " << channel_dist << "\n";
+
+           double channel_cost = topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->par("cost");//Get assigned cost for each channel written in .ned file
+           EV<<"cost = " << channel_cost << "\n";
+
+
+           if(strstr(topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName(),"quantum")){
+               //EV<<"This is a quantum link\n";
+               //topo2->getNode(x)->getLinkOut(j)->disable();
+               // actually add the edge
+               //EV <<"Adding edge from " << x << " to " << nodeNumber << " with weight " << channel_dist << "\n";
+               EV <<"g.addEdge("<<x<<", "<< nodeNumber << ", " << channel_dist <<");\n";
+               qDGraph.addEdge(x, nodeNumber, channel_dist);
+           }else{
+               //EV<<"This is a classical link\n";
+               //Otherwise, keep the classical channels and set the weight
+               //topo2->getNode(x)->getLinkOut(j)->setWeight(channel_cost);//Set channel weight
+               //EV<<"\n Including classical channel link cost = "<< topo->getNode(x)->getLinkOut(j)->getWeight()<<": "<<topo->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->getFullName()<<"\n";
            }
 
-           cTopology::Node *thisNode = topo2->getNodeFor(getParentModule());//The parent node with this specific router
 
-           int number_of_links_total = 0;
+       }
+    }
 
-           //Initialize channel weights for all existing links.
-           for (int x = 0; x < topo2->getNumNodes(); x++) {//Traverse through all nodes
-               //For Bidirectional channels, parameters are stored in LinkOut not LinkIn.
-               for (int j = 0; j < topo2->getNode(x)->getNumOutLinks(); j++) {//Traverse through all links from a specific node.
-                   //thisNode->disable();//You can also disable nodes or channels accordingly to represent broken hardwares
-                   EV<<"\n thisNode is "<< topo2->getNode(x)->getModule()->getFullName() <<" has "<<topo2->getNode(x)->getNumOutLinks()<<" links \n";
-                   double channel_dist = topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->par("distance");//Get assigned cost for each channel written in .ned file
-
-                   /*
-                   EV<<topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName()<<" =? "<<"includes quantum?"<<"\n";
-                   //if(strcmp(topo->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->getFullName(),"QuantumChannel")==0){
-                   if(strstr(topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName(),"quantum")){
-                       //Ignore quantum link in classical routing table
-                       EV<<"\n Disable quantum from topo \n";
-                       topo2->getNode(x)->getLinkOut(j)->disable();
-                   }else{
-                       //Otherwise, keep the classical channels and set the weight
-                       topo2->getNode(x)->getLinkOut(j)->setWeight(channel_cost);//Set channel weight
-                       EV<<"\n Including classical channel link cost = "<< topo->getNode(x)->getLinkOut(j)->getWeight()<<": "<<topo->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->getFullName()<<"\n";
-                   }*/
-               }
-           }
+    //copy temp to the private variable G
+    //g = &temp;
 }
 
 void Router::yensTest(){
-    EV<<"fake yens test\n";
+    EV <<"\n\n****************************************************\n";
+    EV <<"*******************Testing yen function*************\n";
+    EV <<"****************************************************\n";
 
-    // create the graph
-        int V = 9;
-        Graph g(V);
-        // the picture of g is in the link of line 3
-        // edge between u, v. The third int is weight
-        g.addEdge(0, 1, 4);
-        g.addEdge(0, 7, 8);
-        g.addEdge(1, 2, 8);
-        g.addEdge(1, 7, 11);
-        g.addEdge(2, 3, 7);
-        g.addEdge(2, 8, 2);
-        g.addEdge(2, 5, 4);
-        g.addEdge(3, 4, 9);
-        g.addEdge(3, 5, 14);
-        g.addEdge(4, 5, 10);
-        g.addEdge(5, 6, 2);
-        g.addEdge(6, 7, 1);
-        g.addEdge(6, 8, 6);
-        g.addEdge(7, 8, 7);
 
-        vector<vector<int> > A;
+    vector<vector<int> > A;
+    A = yen(qDGraph, 0, 2, 10);
 
-        vector<int> temp = {0, 1, 2, 5, 6};
-
-        for(auto it = temp.begin(); it != temp.end(); ++it)
-                EV << *it << ' ';
-        temp = slicing(temp, 0, 3);
-        EV <<"\nSliced the vector from 0, 3\n";
-        showlist(temp);
-        // shortest path from node 0 to 4, K = 8
-
-        EV <<"Calling Yens\n";
-        A = yen(g, 0, 4, 8); // simulation crashed after inputting parameters here
-
-        for(auto it = A.begin(); it != A.end(); ++it) {
-            showlist(*it);
-            //cout << "\n";
-            EV << "\n";
-        }
-
+    for(auto it = A.begin(); it != A.end(); ++it) {
+        showlist(*it);
+        //cout << "\n";
+        EV << "\n";
+    }
 }
 
 } // namespace modules
