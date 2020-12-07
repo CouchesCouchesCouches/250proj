@@ -1,5 +1,5 @@
 #include "globals.h"
 
-#define NODES	26
+#define NUM_Q_NODES	26
 
-YEN::Graph qDGraph(NODES);
+YEN::Graph qDGraph(NUM_Q_NODES);
