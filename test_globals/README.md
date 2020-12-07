@@ -1,3 +1,6 @@
+## Build
+Run with ./make
+
 ## Files
 ### globals.cc
 - definitions of global variables
