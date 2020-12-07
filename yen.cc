@@ -11,6 +11,7 @@ using namespace std;
 // iPair ==>  Integer Pair
 typedef pair<int, int> iPair;
 typedef pair<int, vector<int> > vPair;
+int inf = 1000000;
 
 // Global definition of a graph
 //Graph aGraph(15);
@@ -39,8 +40,12 @@ void Graph::delGraph() {
 
 // function to add an edge to graph
 void Graph::addEdge(int u, int v, int w) {
-    adj[u].push_back(make_pair(v, w));
-    adj[v].push_back(make_pair(u, w));
+    iPair possible_edge = make_pair(v, w);
+bool found = (find(adj[u].begin(), adj[u].end(), possible_edge) != adj[u].end());
+    if (!found){
+        adj[u].push_back(possible_edge);
+        adj[v].push_back(make_pair(u, w));
+    }
 }
 
 void Graph::delEdge(int u, int v){
@@ -89,9 +94,10 @@ vector<int> Graph::dijkstra(int src, int des){
     // Create a vector for distances and initialize all
     // distances as infinite (INF)
     //vector<int> dist(V, INT_MAX);
+    
     dist.reserve(V);
     for (int i=0; i<V; i++){
-        dist[i] = 100000;
+        dist[i] = inf;
     }
     // Insert source itself in priority queue and initialize
     // its distance as 0.
@@ -141,9 +147,6 @@ vector<int> Graph::dijkstra(int src, int des){
     return path;
 }
 
-
-
-
 // helper function to slice vector from X to Y, inclusive
 vector<int> slicing(vector<int>& arr, int X, int Y) {
     // Starting and Ending iterators
@@ -190,7 +193,7 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
                 }
                 vector<int> slice = slicing(p, 0, i);
 
-                if ((slicing) && equal(rootPath.begin(), rootPath.end(), slice.begin())) {
+                if (equal(rootPath.begin(), rootPath.end(), slice.begin())) {
                 //if (rootPath == slicing(p, 0, i)) {
                     // Remove the links that are part of the previous shortest paths which share the same root path
                     g_copy.delEdge(p[i], p[i+1]);
@@ -212,8 +215,9 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
             // Add the potential k-shortest path to the heap
             //if (totalPath not in B):
             //   B.append(totalPath);
-            if (B.empty()){
-                B.push(make_pair(root_dis+spur_dis, totalPath));
+            int total_dis = root_dis+spur_dis;
+            if (B.empty() && total_dis < inf){
+                B.push(make_pair(total_dis, totalPath));
             }
             priority_queue<vPair, vector<vPair>, greater<vPair> > temp;
             bool found = false;
@@ -222,11 +226,11 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
                 temp.push(dis_path);
                 B.pop();
                 if (dis_path.second == totalPath && !found){
-                    found = true;
+                    found = true;             
                 }
             }
-            if (!found) {
-                temp.push(make_pair(root_dis+spur_dis, totalPath));
+            if (!found && total_dis < inf) {
+                temp.push(make_pair(total_dis, totalPath));
             }
             B = temp;
             // Add back the edges and nodes that were removed from the graph
@@ -246,4 +250,3 @@ vector<vector<int> > yen(Graph g, int s, int d, int K) {
     }
     return A;
 }
-
