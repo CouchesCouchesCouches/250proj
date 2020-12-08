@@ -53,6 +53,7 @@ class Router : public cSimpleModule
         virtual void printInfo(); // print some stats about the graph
         virtual void populateGraph(); // create and init edges for a graph
         virtual void yensTest(); // test from test.cc on github using dummy links
+        virtual void createMajorPaths(); // use the populated graph to set major paths
 };
 
 Define_Module(Router);
@@ -72,7 +73,8 @@ void Router::initialize(int stage)
            EV<<"Initializing global things in address = 0\n";
            printInfo();
            populateGraph(); // populate the graph g used for Yen's
-           yensTest();
+           createMajorPaths(); // create paths using Yen's and store in major_paths
+           //yensTest();
        }
 
        //Topology creation for routing table
@@ -412,6 +414,19 @@ void Router::populateGraph() {
 
     //copy temp to the private variable G
     //g = &temp;
+}
+
+void Router::createMajorPaths() {
+    major_paths = yen(qDGraph, SOURCE_NODE, DESTINATION_NODE, NUM_YEN_PATHS);
+    EV <<"\n\n****************************************************\n";
+    EV << "Printing major paths\n";
+    std::cout <<"\n\n****************************************************\n";
+    std::cout << "Printing major paths\n";
+    for(auto it = major_paths.begin(); it != major_paths.end(); ++it) {
+        showlist(*it);
+        //cout << "\n";
+        EV << "\n";
+    }
 }
 
 void Router::yensTest(){

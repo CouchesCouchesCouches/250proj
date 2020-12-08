@@ -156,8 +156,12 @@ void HoM_Controller::handleMessage(cMessage *msg){
         // Track link states of HoMs
         setLinkState();
 
-        // Using the link states, set up end to end entanglement
-        consumeLinks();
+        // setup end to end entanglements only if last HoM
+        int thisaddr = getParentModule()->par("address");
+        thisaddr -= 10;
+        if(thisaddr == 22) {
+            consumeLinks(); // Using the link states, set up end to end entanglement
+        }
 
         bubble("done");
         sendBSAresultsToNeighbors();//memory leak
@@ -506,82 +510,112 @@ void HoM_Controller::setLinkState() {
 }
 
 void HoM_Controller::consumeLinks() {
-    EV <<"\n\n****************************************************\n";
-    EV <<"******************Adding to total entanglements*****\n";
-    EV <<"****************************************************\n";
-    EV << "totalEntanglements (before) = " << totalEntanglements << "\n";
-    int thisaddr = getParentModule()->par("address");
-    thisaddr -= 10;
-    if(thisaddr == 22){
 
-        vector<vector<int> > A;
+    std::cout <<"\n\n****************************************************\n";
+    std::cout <<"************Adding to total entanglements***********\n";
+    std::cout <<"****************************************************\n";
+    std::cout << "totalEntanglements (before) = " << totalEntanglements << "\n";
+    std::cout << "Print out HoM link states: \n";
+    for(int i=0; i<23;i++ ){ // HARDCODED NUM OF HOMS TO 22
+        std::cout<<"HoM " << i<<", entangled = "<<HoMstates[i]<<"\n";
+    }
 
-        A = yen(qDGraph, 0, 2, 1); // create a vector of paths (vectors of ints)
+    std::cout << "major_paths.size() = " <<major_paths.size() << "\n";
 
-        for(auto it = A.begin(); it != A.end(); ++it) {
-                showlist(*it);
-                //cout << "\n";
-                EV << "\n";
-        }
-        int max = totalEntanglements + 10; // maximum number of entanglements to have after
-        int left_to_entangle = 10; // initially no entanglements made for this run
-        int max_width = 0;
-        int HoMaddress;
-        bool HoM_flag = false;
-        // using these paths, check the link states
-        for(auto path = A.begin(); path != A.end(); ++path) {
-            if(totalEntanglements == max) { // stop once max is reached
-                EV << max << " end to end entanglements!\nEnd...\n";
-                break;
+    bool debug_flag = false;
+    if(debug_flag) {
+        for(int path = 0; path < major_paths.size(); path++) {
+            //showlist_cout(major_paths[path]);
+            std::cout << "path size = " << major_paths[path].size() << ": ";
+            for(int node_index = 0; node_index < major_paths[path].size(); node_index++) {
+                std::cout << major_paths[path][node_index] << " ";
             }
-            for(auto node = path->begin(); node != path->end(); ++node) {
-                if(HoM_flag) {
-                    HoMaddress = (int) *node;
-                    HoMaddress -= 10; // HoM have address into HoMstates = address - 10
-                    EV << "HoMstates[" << HoMaddress << "] = " << HoMstates[HoMaddress] << "\n";
-                    // check max_width along entire path and then decrement all by max_width
-                    if(HoMstates[HoMaddress] > max_width) {
-                        max_width = HoMstates[HoMaddress];
-                    }
-                    HoM_flag = false;
-                }
-                else {//skip non HoM nodes
-                    HoM_flag = true;
-                }
+            std::cout <<"\n";
+            std::cout << "HoM's in the path: \n";
+            for(int node_index = 1; node_index < major_paths[path].size(); node_index += 2) { // HoMs are every other node starting from node 1
+                int HoM_address = major_paths[path][node_index];
+                int HoM_index = HoM_address - 10;
+                std::cout << "HoMstates[" << HoM_index << "] = " << HoMstates[HoM_index] << "\n";
             }
-            HoM_flag = false;
-            if(max_width != 0) {
-                // check if max_width is bigger than we need
-                if(max_width > left_to_entangle) {
-                    max_width = left_to_entangle;
-                }
-                // decrement the widths
-                for(auto node = path->begin(); node != path->end(); ++node) {
-                    if(HoM_flag) {
-                        HoMaddress = (int) *node;
-                        HoMaddress -= 10; // HoM have address into HoMstates = address - 10
-                        //EV << "HoMstates[" << HoMaddress << "] = " << HoMstates[HoMaddress] << "\n";
-                        // check max_width along entire path and then decrement all by max_width
-                        HoMstates[HoMaddress] -= max_width;
-                        HoM_flag = false;
-                    }
-                    else {//skip non HoM nodes
-                        HoM_flag = true;
-                    }
-                }
-                // debug print statements: show which path we just added to
-                EV << "Successfully used " << max_width << " links along path:";
-                showlist(*path);
-                totalEntanglements += max_width; // add to total successful entanglements
-                left_to_entangle -= max_width;
-                max_width = 0;
-                HoM_flag = false;
-            }
+            std::cout <<"\n";
         }
     }
+
+    // actually do the decrementing ^^ this is all for debugging^
+    std::cout <<"****************************************************\n";
+    std::cout <<"**********Actually calculating entanglements*********\n";
+
+    int max = totalEntanglements + 10; // maximum number of entanglements to have after
+    int left_to_entangle = 10; // initially no entanglements made for this run
+    int max_width = 10;
+    int HoM_address;
+    int HoM_index;
+    // using these paths, check the link states
+    for(int path = 0; path < major_paths.size(); path++) {
+        if(totalEntanglements == max) { // stop once max is reached
+            EV << max << " end to end entanglements!\nEnd...\n";
+            std::cout << max << " end to end entanglements!\nEnd...\n";
+            break;
+        }
+        std::cout << "Checking path " << path << ": ";
+        showlist_cout(major_paths[path]);
+        std::cout << "\n";
+        for(int node_index = 1; node_index < major_paths[path].size(); node_index += 2) { // every other and start from 1 for HoM nodes
+            HoM_address = major_paths[path][node_index];
+            HoM_index = HoM_address - 10;
+            std::cout << "HoMstates[" << HoM_index << "] (node "<<HoM_address<<") = " << HoMstates[HoM_index] << "\n";
+            //std::cout << "max_width = " << max_width << "\n";
+            // check max_width along entire path and then decrement all by max_width
+            if(HoMstates[HoM_index] < max_width) {
+                max_width = HoMstates[HoM_index];
+                if(max_width == 0) {
+                    std::cout << "Found edge width of 0, skipping this path\n";
+                    break;
+                }
+            }
+        }
+        if(max_width != 0) {
+            // check if max_width is bigger than we need
+            if(max_width > left_to_entangle) {
+                max_width = left_to_entangle;
+            }
+            // decrement the widths
+            for(int node_index = 1; node_index < major_paths[path].size(); node_index += 2) {
+                HoM_address = major_paths[path][node_index];
+                HoM_index = HoM_address - 10;// HoM have address into HoMstates = address - 10
+                //EV << "HoMstates[" << HoMaddress << "] = " << HoMstates[HoMaddress] << "\n";
+                // decrement all by max_width
+                HoMstates[HoM_index] -= max_width;
+            }
+            // debug print statements: show which path we just added to
+            EV << "Successfully used " << max_width << " links along path:";
+            showlist(major_paths[path]);
+            EV << "\n";
+
+            std::cout << "Successfully used " << max_width << " links along path:";
+            showlist_cout(major_paths[path]);
+            std::cout << "\n";
+
+            totalEntanglements += max_width; // add to total successful entanglements
+            left_to_entangle -= max_width;
+        }
+        //debug stuff
+        std::cout << "HoMstates after being consumed:\n";
+        for(int node_index = 1; node_index < major_paths[path].size(); node_index += 2) { // every other and start from 1 for HoM nodes
+            HoM_address = major_paths[path][node_index];
+            HoM_index = HoM_address - 10;
+            std::cout << "HoMstates[" << HoM_index << "] (node "<<HoM_address<<") = " << HoMstates[HoM_index] << "\n";
+        }
+        std::cout << "\n";
+        //end debug stuff
+        max_width = 10;
+    }
+    std::cout << "totalEntanglements (after) = " << totalEntanglements << "\n";
+
     //EV << "totalEntanglements (after) = " << totalEntanglements << "\n";
     return;
 }
+
 
 /*
 void HoM_Controller::finish(){
