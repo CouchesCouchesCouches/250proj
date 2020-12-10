@@ -45,6 +45,11 @@ void HoM_Controller::initialize(int stage)
     } else {
         error("Set receiver parameter of HoM to true or false.");
     }
+
+    // register the entanglement count signal
+    consumeSignal = registerSignal("consume");
+    countDistSignal = registerSignal("total_dist");
+    countCostSignal = registerSignal("total_cost");
 }
 
 
@@ -163,7 +168,11 @@ void HoM_Controller::handleMessage(cMessage *msg){
         if(thisaddr == 22) {
             // std::cout << "consume links: " << thisaddr <<"\n";
             consumeLinks(); // Using the link states, set up end to end entanglement
-            recover(major_paths[0]);
+            //std::cout << "Emitting consumeSignal for totalEntanglements = " << totalEntanglements <<"\n";
+            emit(consumeSignal, totalEntanglements); // emit the signal for total entanglements at this step
+            // reset after each time
+            totalEntanglements = 0;
+            //recover(major_paths[0]);
         }
 
         bubble("done");
@@ -518,13 +527,14 @@ void HoM_Controller::consumeLinks() {
     std::cout <<"************Adding to total entanglements***********\n";
     std::cout <<"****************************************************\n";
     std::cout << "totalEntanglements (before) = " << totalEntanglements << "\n";
+    /*
     std::cout << "Print out HoM link states: \n";
     for(int i=0; i<23;i++ ){ // HARDCODED NUM OF HOMS TO 22
         std::cout<<"HoM " << i<<", entangled = "<<HoMstates[i]<<"\n";
     }
 
     std::cout << "major_paths.size() = " <<major_paths.size() << "\n";
-
+     */
     bool debug_flag = false;
     if(debug_flag) {
         for(int path = 0; path < major_paths.size(); path++) {
@@ -629,6 +639,10 @@ void HoM_Controller::consumeLinks() {
 
             totalEntanglements += max_width; // add to total successful entanglements
             left_to_entangle -= max_width;
+
+            // this was a successful path so emit a signal counting the distance along this path
+            emit_dist_and_cost(path);
+            // emit another signal for hop count
         }
         //debug stuff
         std::cout << "HoMstates after being consumed:\n";
@@ -642,15 +656,55 @@ void HoM_Controller::consumeLinks() {
         max_width = NUM_END_TO_END_ENTANG;
     }
     std::cout << "totalEntanglements (after) = " << totalEntanglements << "\n";
-
     //EV << "totalEntanglements (after) = " << totalEntanglements << "\n";
     return;
+}
+
+void HoM_Controller::emit_dist_and_cost(vector<int> path) {
+    cTopology *pathTopo = new cTopology("pathTopo");
+    cMsgPar *yes = new cMsgPar();
+    yes->setStringValue("yes");
+    pathTopo->extractByParameter("includeInTopo",yes->str().c_str());
+    delete(yes);
+
+    int address;
+    double channel_dist, channel_cost;
+    double total_dist = 0;
+    double total_cost = 0;
+    int node;
+    for(int i = 0; i < path.size() - 1; i++) { // stop at 1 - end node
+        node = path[i];
+        std::cout << "node: " << node << "\n";
+        std::cout << "total_dist = " << total_dist << "\n";
+        std::cout << "total_cost = " << total_cost << "\n";
+        for(int j = 0; j < pathTopo->getNode(node)->getNumOutLinks(); j++) {
+            // loop through all of its neighbors until we find the neighbor corresponding to next node in path
+            address = pathTopo->getNode(node)->getLinkOut(j)->getRemoteNode()->getModule()->par("address");
+            std::cout << "Comparing address: " << address << " to path[i+1]: " << path[i+1] << "\n";
+            if(address == path[i+1]) {// the correct next node
+                channel_dist = pathTopo->getNode(node)->getLinkOut(j)->getLocalGate()->getChannel()->par("distance");
+                channel_cost = pathTopo->getNode(node)->getLinkOut(j)->getLocalGate()->getChannel()->par("cost");
+
+                total_dist += channel_dist;
+                total_cost += channel_cost;
+                break;
+            }
+        }
+    }
+    delete pathTopo;
+    std::cout << "Emitting: node: " << path[path.size()-1] << "\n";
+    std::cout << "total_dist = " << total_dist << "\n";
+    std::cout << "total_cost = " << total_cost << "\n";
+
+    // actually emit the values;
+    emit(countDistSignal, total_dist);
+    emit(countCostSignal, total_cost);
 }
 
 bool HoM_Controller::check_link_state(vector<int> segment){
     for (int i=1; i<segment.size(); i=i+2){ // only check HoM nodes
         int h = segment[i];
-        std::cout << "HoMstates[" << h - 10 << "] = " << HoMstates[h-10] << "\n";
+        //std::cout << "HoMstates[" << h - 10 << "] = " << HoMstates[h-10] << "\n";
         if (HoMstates[h - 10] == 0){
             return false;
         }
@@ -738,6 +792,7 @@ std::vector<int> HoM_Controller::recover(vector<int> path){
     showlist_cout(recovery_path);
     std::cout <<"\n";
     // print homstates for debugging
+
     for(int i = 1; i < recovery_path.size(); i+=2) {
         std::cout << "HoMstates["<<recovery_path[i] - 10 << "] = "<<HoMstates[recovery_path[i] - 10] << "\n";
     }

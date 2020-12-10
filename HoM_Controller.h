@@ -39,6 +39,11 @@ class HoM_Controller : public cSimpleModule
         int time_out_count;
         int success_count = 0;
         // simsignal_t recog_resSignal;
+
+        // added parameters for data collection
+        simsignal_t consumeSignal;
+        simsignal_t countDistSignal;
+        simsignal_t countCostSignal;
     public:
         int neighbor_address;
         int neighbor_address_two;
@@ -94,6 +99,7 @@ class HoM_Controller : public cSimpleModule
         virtual std::vector<int> recover(std::vector<int> segment);
         virtual bool check_link_state(std::vector<int> segment);
         virtual void build_graph();
+        virtual void emit_dist_and_cost(std::vector<int> path);
         //virtual void  finish();
     public:
         virtual void setMax_buffer(int buffer);

@@ -11,6 +11,14 @@ network Better_quantum_network
         **.buffers = default(10);
         //**.distance = 20 km;
         @display("bgb=1000,600");
+        
+        //added parameters for data collection
+        @signal[consume](type="long");
+        @statistic[totalEntanglements](title="Total Entangled S-D Pairs"; source="consume"; record=vector,stats; interpolationmode=none);
+        @signal[total_dist](type="long");
+        @statistic[total_dist](title="Total Distance"; source="total_dist"; record=vector,stats; interpolationmode=none);
+        @signal[total_cost](type="long");
+        @statistic[total_cost](title="Total Cost"; source="total_cost"; record=vector,stats; interpolationmode=none);
     types:
         channel C extends DatarateChannel
         {
@@ -197,7 +205,7 @@ network Better_quantum_network
 
     connections:
         //connect endnodes to repeaters
-        endnode0.port++ <--> C {  cost = 20; } <--> HoM0.port++;
+        endnode0.port++ <--> C <--> HoM0.port++;
         HoM0.port++ <--> C <--> repeater0.port++;
 
         endnode0.port++ <--> C <--> HoM1.port++;
