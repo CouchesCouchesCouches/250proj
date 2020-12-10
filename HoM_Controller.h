@@ -91,6 +91,9 @@ class HoM_Controller : public cSimpleModule
         virtual int entangledCount();
         virtual void setLinkState();
         virtual void consumeLinks();
+        virtual std::vector<int> recover(std::vector<int> segment);
+        virtual bool check_link_state(std::vector<int> segment);
+        virtual void build_graph();
         //virtual void  finish();
     public:
         virtual void setMax_buffer(int buffer);

@@ -6,6 +6,7 @@
 int SOURCE_NODE = 0;
 int DESTINATION_NODE = 2;
 int NUM_YEN_PATHS = 5;
+int NUM_END_TO_END_ENTANG = 10;
 
 YEN::Graph qDGraph(NUM_Q_NODES);
 

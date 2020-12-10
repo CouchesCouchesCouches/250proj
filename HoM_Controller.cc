@@ -158,9 +158,12 @@ void HoM_Controller::handleMessage(cMessage *msg){
 
         // setup end to end entanglements only if last HoM
         int thisaddr = getParentModule()->par("address");
+        // std::cout << "BSA finish for address: " << thisaddr <<"\n";
         thisaddr -= 10;
         if(thisaddr == 22) {
+            // std::cout << "consume links: " << thisaddr <<"\n";
             consumeLinks(); // Using the link states, set up end to end entanglement
+            recover(major_paths[0]);
         }
 
         bubble("done");
@@ -545,43 +548,71 @@ void HoM_Controller::consumeLinks() {
     std::cout <<"****************************************************\n";
     std::cout <<"**********Actually calculating entanglements*********\n";
 
-    int max = totalEntanglements + 10; // maximum number of entanglements to have after
-    int left_to_entangle = 10; // initially no entanglements made for this run
-    int max_width = 10;
+    int max = totalEntanglements + NUM_END_TO_END_ENTANG; // maximum number of entanglements to have after
+    int left_to_entangle = NUM_END_TO_END_ENTANG; // initially no entanglements made for this run
+    int max_width = NUM_END_TO_END_ENTANG;
     int HoM_address;
     int HoM_index;
+    int attempts;
+
     // using these paths, check the link states
-    for(int path = 0; path < major_paths.size(); path++) {
+    for(int path_index = 0; path_index < major_paths.size(); path_index++) {
+        // copy the path so not pointing to same vector by reference
+        vector<int> path;
+        for(int i = 0; i < major_paths[path_index].size(); i++) {
+            path.push_back(major_paths[path_index][i]);
+        } // copied
+
         if(totalEntanglements == max) { // stop once max is reached
             EV << max << " end to end entanglements!\nEnd...\n";
             std::cout << max << " end to end entanglements!\nEnd...\n";
             break;
         }
-        std::cout << "Checking path " << path << ": ";
-        showlist_cout(major_paths[path]);
-        std::cout << "\n";
-        for(int node_index = 1; node_index < major_paths[path].size(); node_index += 2) { // every other and start from 1 for HoM nodes
-            HoM_address = major_paths[path][node_index];
-            HoM_index = HoM_address - 10;
-            std::cout << "HoMstates[" << HoM_index << "] (node "<<HoM_address<<") = " << HoMstates[HoM_index] << "\n";
-            //std::cout << "max_width = " << max_width << "\n";
-            // check max_width along entire path and then decrement all by max_width
-            if(HoMstates[HoM_index] < max_width) {
-                max_width = HoMstates[HoM_index];
-                if(max_width == 0) {
-                    std::cout << "Found edge width of 0, skipping this path\n";
+
+        while(true) {
+            std::cout << "Checking path " << path_index << " on attempt " << attempts <<": ";
+            showlist_cout(path);
+            std::cout << "\n";
+            for(int node_index = 1; node_index < path.size(); node_index += 2) { // every other and start from 1 for HoM nodes
+                HoM_address = path[node_index];
+                HoM_index = HoM_address - 10;
+                std::cout << "HoMstates[" << HoM_index << "] (node "<<HoM_address<<") = " << HoMstates[HoM_index] << "\n";
+                //std::cout << "max_width = " << max_width << "\n";
+                // check max_width along entire path and then decrement all by max_width
+                if(HoMstates[HoM_index] < max_width) {
+                    max_width = HoMstates[HoM_index];
+                    if(max_width == 0) {
+                        std::cout << "Found edge width of 0, skipping this path\n";
+                        break;
+                    }
+                }
+            }
+            if(max_width == 0) { // failed path so find a recovery path
+                std::cout << "Looking for a recovery path because max_width was 0\n";
+                path = recover(path);
+                if(path[0] == SOURCE_NODE) {
+                    std::cout << "Successfully found a recovery path\n";
+                    max_width = NUM_END_TO_END_ENTANG;
+                }
+                else { // no recovery path, just break
+                    std::cout <<"Failed to find a recovery path\n";
                     break;
                 }
             }
+            else { // this is a successful path so keep going
+                break;
+            }
         }
+
+        // take a working path and update totalEntanglements and HoMstates along the path
         if(max_width != 0) {
             // check if max_width is bigger than we need
             if(max_width > left_to_entangle) {
                 max_width = left_to_entangle;
             }
             // decrement the widths
-            for(int node_index = 1; node_index < major_paths[path].size(); node_index += 2) {
-                HoM_address = major_paths[path][node_index];
+            for(int node_index = 1; node_index < path.size(); node_index += 2) {
+                HoM_address = path[node_index];
                 HoM_index = HoM_address - 10;// HoM have address into HoMstates = address - 10
                 //EV << "HoMstates[" << HoMaddress << "] = " << HoMstates[HoMaddress] << "\n";
                 // decrement all by max_width
@@ -589,11 +620,11 @@ void HoM_Controller::consumeLinks() {
             }
             // debug print statements: show which path we just added to
             EV << "Successfully used " << max_width << " links along path:";
-            showlist(major_paths[path]);
+            showlist(path);
             EV << "\n";
 
             std::cout << "Successfully used " << max_width << " links along path:";
-            showlist_cout(major_paths[path]);
+            showlist_cout(path);
             std::cout << "\n";
 
             totalEntanglements += max_width; // add to total successful entanglements
@@ -601,14 +632,14 @@ void HoM_Controller::consumeLinks() {
         }
         //debug stuff
         std::cout << "HoMstates after being consumed:\n";
-        for(int node_index = 1; node_index < major_paths[path].size(); node_index += 2) { // every other and start from 1 for HoM nodes
-            HoM_address = major_paths[path][node_index];
+        for(int node_index = 1; node_index < path.size(); node_index += 2) { // every other and start from 1 for HoM nodes
+            HoM_address = path[node_index];
             HoM_index = HoM_address - 10;
             std::cout << "HoMstates[" << HoM_index << "] (node "<<HoM_address<<") = " << HoMstates[HoM_index] << "\n";
         }
         std::cout << "\n";
         //end debug stuff
-        max_width = 10;
+        max_width = NUM_END_TO_END_ENTANG;
     }
     std::cout << "totalEntanglements (after) = " << totalEntanglements << "\n";
 
@@ -616,6 +647,143 @@ void HoM_Controller::consumeLinks() {
     return;
 }
 
+bool HoM_Controller::check_link_state(vector<int> segment){
+    for (int i=1; i<segment.size(); i=i+2){ // only check HoM nodes
+        int h = segment[i];
+        std::cout << "HoMstates[" << h - 10 << "] = " << HoMstates[h-10] << "\n";
+        if (HoMstates[h - 10] == 0){
+            return false;
+        }
+    }
+    return true;
+}
+
+/*
+ * inputs:
+ *  path to recover from
+ * outputs:
+ *  new recovery path that works if there is one
+ *  NULL if there is not
+ */
+
+std::vector<int> HoM_Controller::recover(vector<int> path){
+    std::cout <<"***********************************************************\n";
+    std::cout <<"*******************CALLING recover()***********************\n";
+    int k = 1;
+    // find all segments
+    vector<vector<int> > segments;
+    for (int i=2; i<=path.size()-1; i=i+4) {  // skip HoM
+        if (i == path.size()-1){ // if the current node is the last node
+            vector<int> seg = slicing(path, i-2, i);
+            segments.push_back(seg);
+            break;
+        }
+        vector<int> seg = slicing(path, i-2, i+2);
+        segments.push_back(seg);
+    }
+    std::cout << "path: ";
+    showlist_cout(path);
+    std::cout << "was broken into: \n";
+    for(int i = 0; i < segments.size(); i++) {
+        showlist_cout(segments[i]);
+        std::cout <<"\n";
+    }
+    // remember that interconnecting nodes are stored twice
+
+    //check if segments are viable
+    for (int j=0; j<segments.size(); j++){
+        std::cout << "Checking segment " << j << "\n";
+        vector<int> seg = segments[j];
+        // for each segment, check link_state
+        vector<vector<int> > recov_segs;
+        if (check_link_state(seg) == false){
+            // int begin = seg.front();
+            // int end = seg.back();
+            // cout << begin << " to " << end << endl;
+            build_graph();  // need to rebuild g before calling yen
+            recov_segs = yen(qDGraph, seg.front(), seg.back(), 5); // get 5 other options for this broken segment
+            std::cout << "Find 5 recovery paths using Yens\n";
+            for (int i=1; i<recov_segs.size(); i++){
+                showlist_cout(recov_segs[i]);
+                std::cout <<"\n";
+                if(check_link_state(recov_segs[i]) == true){
+                    segments[j] = recov_segs[i];
+                    break;
+                }
+            }
+        }
+    }
+
+    // construct the recovery path for the given path
+    vector<int> recovery_path;
+    int curr, prev;
+    for(int i = 0; i < segments.size(); i++) {
+        for(int j = 0; j < segments[i].size(); j++) {
+            curr = segments[i][j];
+            if(i == 0 && j == 0) { // first node so dont check previous
+                recovery_path.push_back(curr);
+                prev = curr;
+            }
+            else {
+                if(prev == curr) { // skip duplicate nodes connecting segments
+                    continue;
+                }
+                recovery_path.push_back(curr);
+                prev = curr;
+            }
+        }
+    }
+
+    std::cout << "Possible recovery path for given path:\n";
+    showlist_cout(recovery_path);
+    std::cout <<"\n";
+    // print homstates for debugging
+    for(int i = 1; i < recovery_path.size(); i+=2) {
+        std::cout << "HoMstates["<<recovery_path[i] - 10 << "] = "<<HoMstates[recovery_path[i] - 10] << "\n";
+    }
+    if(check_link_state(recovery_path)) { // if the recovery path actually works, return it
+        std::cout << " Found recovery path: ";
+        showlist_cout(recovery_path);
+        std::cout << "\n";
+        return recovery_path;
+    }
+    vector<int> garbage;
+    garbage.push_back(-1); // catch this for failure to find recovery path
+    std::cout << "No recovery path found, returning: ";
+    showlist_cout(garbage);
+    std::cout << "\n";
+    return garbage;
+}
+
+
+// populate a graph's edges
+void HoM_Controller::build_graph() {
+    //Create the graph built from the topology using weights as quantum channel distances
+    EV <<"Populating graph of quantum channel distances\n";
+    cTopology *topo2 = new cTopology("topo2");
+    cMsgPar *yes = new cMsgPar();
+    yes->setStringValue("yes");
+    topo2->extractByParameter("includeInTopo",yes->str().c_str());//Any node that has a parameter includeInTopo will be included in routing
+    delete(yes);
+    if(topo2->getNumNodes()==0 || topo2==nullptr){//If no node with the parameter & value found, do nothing.
+            return;
+    }
+    int V = topo2->getNumNodes();
+
+    //Initialize channel weights for all existing links.
+    for (int x = 0; x < topo2->getNumNodes(); x++) {//Traverse through all nodes
+       for (int j = 0; j < topo2->getNode(x)->getNumOutLinks(); j++) {//Traverse through all links from a specific node.
+           int address = topo2->getNode(x)->getModule()->par("address");
+           int neighbor_address =  topo2->getNode(x)->getLinkOut(j)->getRemoteNode()->getModule()->par("address");
+           int nodeNumber = neighbor_address % 10000000;
+           double channel_dist = topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getChannel()->par("distance");//Get assigned cost for each channel written in .ned file
+           if(strstr(topo2->getNode(x)->getLinkOut(j)->getLocalGate()->getFullName(),"quantum")){
+               EV <<"g.addEdge("<<x<<", "<< nodeNumber << ", " << channel_dist <<");\n";
+               qDGraph.addEdge(x, nodeNumber, channel_dist);
+           }
+       }
+    }
+}// end build_graph
 
 /*
 void HoM_Controller::finish(){
