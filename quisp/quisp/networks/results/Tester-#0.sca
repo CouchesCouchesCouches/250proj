@@ -1,0 +1,235 @@
+version 2
+run Tester-0-20201215-02:39:21-660
+attr configname Tester
+attr datetime 20201215-02:39:21
+attr experiment Tester
+attr inifile quisp_tutorial.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Better_quantum_network
+attr processid 660
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.TrafficPattern 3
+param **.LoneInitiatorAddress 100000
+param **.link_tomography true
+param **.initial_purification 0
+param **.Purification_type 2002
+param Better_quantum_network.**.quantum_port[*].channel.photon_loss_rate 0.04501
+param Better_quantum_network.**.quantum_port[*].channel.*_error_ratio 0.03
+param Better_quantum_network.**.quantum_port[*].channel.channel_error_rate 0.1
+param **.EndToEndConnection true
+param **.Initial_notification_timing_buffer "10 s"
+
+scalar Better_quantum_network.endnode0.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.endnode1.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.endnode2.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.repeater0.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.repeater1.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.repeater2.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.repeater3.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.repeater4.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.repeater5.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.repeater6.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM0.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM0.BSA Num_Bell_state:max 49
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM1.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM1.BSA Num_Bell_state:max 46
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM2.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM2.BSA Num_Bell_state:max 54
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM3.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM3.BSA Num_Bell_state:max 43
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM4.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM4.BSA Num_Bell_state:max 49
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM5.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM5.BSA Num_Bell_state:max 51
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM6.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM6.BSA Num_Bell_state:max 57
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM7.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM7.BSA Num_Bell_state:max 49
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM8.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM8.BSA Num_Bell_state:max 46
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM9.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM9.BSA Num_Bell_state:max 51
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM10.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM10.BSA Num_Bell_state:max 63
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM11.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM11.BSA Num_Bell_state:max 50
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM12.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM12.BSA Num_Bell_state:max 50
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM13.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM13.BSA Num_Bell_state:max 46
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM14.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM14.BSA Num_Bell_state:max 42
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM15.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM15.BSA Num_Bell_state:max 46
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM16.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM16.BSA Num_Bell_state:max 36
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM17.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM17.BSA Num_Bell_state:max 47
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM18.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM18.BSA Num_Bell_state:max 41
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM19.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM19.BSA Num_Bell_state:max 50
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM20.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM20.BSA Num_Bell_state:max 47
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM21.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM21.BSA Num_Bell_state:max 48
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.HoM22.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Better_quantum_network.HoM22.BSA Num_Bell_state:max 35
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.router0.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Better_quantum_network.router1.qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+statistic Better_quantum_network total_cost:stats
+field count 370
+field mean 4.1351351351351
+field stddev 0.48063655635436
+field min 4
+field max 7
+field sum 1530
+field sqrsum 6412
+attr interpolationmode none
+attr source total_cost
+attr title "Total Cost, stats"
+statistic Better_quantum_network total_dist:stats
+field count 370
+field mean 165.40540540541
+field stddev 19.225462254175
+field min 160
+field max 280
+field sum 61200
+field sqrsum 10259200
+attr interpolationmode none
+attr source total_dist
+attr title "Total Distance, stats"
+statistic Better_quantum_network totalEntanglements:stats
+field count 37
+field mean 10
+field stddev 0
+field min 10
+field max 10
+field sum 370
+field sqrsum 3700
+attr interpolationmode none
+attr source consume
+attr title "Total Entangled S-D Pairs, stats"
+

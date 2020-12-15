@@ -1,0 +1,484 @@
+endnode[0]<--->HoM[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[1]<--->HoM[2]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[2]<--->HoM[4]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[0]<--->HoM[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[0]<--->HoM[1]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[1]<--->HoM[2]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[1]<--->HoM[3]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[2]<--->HoM[4]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[2]<--->HoM[5]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[1]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[3]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[5]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[0]<--->HoM[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[1]<--->HoM[2]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[2]<--->HoM[4]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[3]<--->HoM[6]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[4]<--->HoM[8]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[5]<--->HoM[10]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[6]<--->HoM[12]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+endnode[7]<--->HoM[14]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[0]<--->HoM[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[0]<--->HoM[1]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[1]<--->HoM[2]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[1]<--->HoM[3]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[2]<--->HoM[4]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[2]<--->HoM[5]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[3]<--->HoM[6]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[3]<--->HoM[7]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[4]<--->HoM[8]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[4]<--->HoM[9]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[5]<--->HoM[10]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[5]<--->HoM[11]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[6]<--->HoM[12]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[6]<--->HoM[13]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[7]<--->HoM[14]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+repeater[7]<--->HoM[15]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[1]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[3]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[5]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[7]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[9]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[11]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[13]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+router[0]<--->HoM[15]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan

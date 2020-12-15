@@ -1,0 +1,32 @@
+version 2
+run Tutorial_MM-0-20201125-04:54:15-2381
+attr configname Tutorial_MM
+attr datetime 20201125-04:54:15
+attr experiment Tutorial_MM
+attr inifile quisp_tutorial.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Linear_One_MM
+attr processid 2381
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.EndToEndConnection true
+param **.Initial_notification_timing_buffer "10 s"
+
+scalar Linear_One_MM.EndNode[0].qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Linear_One_MM.EndNode[0].qnic_r[0].internal_hom.BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Linear_One_MM.EndNode[0].qnic_r[0].internal_hom.BSA Num_Bell_state:max 10
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Linear_One_MM.EndNode[1].qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+

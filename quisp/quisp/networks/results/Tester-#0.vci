@@ -1,0 +1,136 @@
+file 54833 1608000022                                           
+version 2
+run Tester-0-20201215-02:39:21-660
+attr configname Tester
+attr datetime 20201215-02:39:21
+attr experiment Tester
+attr inifile quisp_tutorial.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Better_quantum_network
+attr processid 660
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.TrafficPattern 3
+param **.LoneInitiatorAddress 100000
+param **.link_tomography true
+param **.initial_purification 0
+param **.Purification_type 2002
+param Better_quantum_network.**.quantum_port[*].channel.photon_loss_rate 0.04501
+param Better_quantum_network.**.quantum_port[*].channel.*_error_ratio 0.03
+param Better_quantum_network.**.quantum_port[*].channel.channel_error_rate 0.1
+param **.EndToEndConnection true
+param **.Initial_notification_timing_buffer "10 s"
+
+vector 0 Better_quantum_network.HoM4.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 1 Better_quantum_network.HoM10.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 2 Better_quantum_network.HoM14.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 3 Better_quantum_network.HoM17.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 4 Better_quantum_network.HoM18.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 5 Better_quantum_network.HoM8.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 6 Better_quantum_network.HoM9.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 7 Better_quantum_network.HoM13.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 8 Better_quantum_network.HoM11.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 9 Better_quantum_network.HoM7.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 10 Better_quantum_network.HoM20.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 11 Better_quantum_network.HoM22.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 12 Better_quantum_network.HoM1.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 13 Better_quantum_network.HoM3.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 14 Better_quantum_network.HoM2.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 15 Better_quantum_network.HoM21.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 16 Better_quantum_network.HoM5.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 17 Better_quantum_network.HoM0.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 18 Better_quantum_network.HoM12.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 19 Better_quantum_network total_dist:vector ETV
+attr interpolationmode none
+attr source total_dist
+attr title "Total Distance, vector"
+vector 20 Better_quantum_network total_cost:vector ETV
+attr interpolationmode none
+attr source total_cost
+attr title "Total Cost, vector"
+vector 21 Better_quantum_network totalEntanglements:vector ETV
+attr interpolationmode none
+attr source consume
+attr title "Total Entangled S-D Pairs, vector"
+vector 22 Better_quantum_network.HoM15.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 23 Better_quantum_network.HoM16.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 24 Better_quantum_network.HoM19.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 25 Better_quantum_network.HoM6.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+0	4736 1270 2940 128341 10.00019480173 10.01025286228 49 1 49 1225 40425
+1	6006 1631 2952 131036 10.00019480173 10.01044766401 63 1 63 2016 85344
+2	7637 1077 2960 131261 10.00019480173 10.01045766401 42 1 42 903 25585
+3	8714 1218 2966 131750 10.00019480173 10.01052766401 47 1 47 1128 35720
+4	9932 1063 2968 124596 10.00019480173 10.00993806055 41 1 41 861 23821
+5	10995 1192 3017 128349 10.00020480173 10.01025286228 46 1 46 1081 33511
+6	12187 1321 3019 131527 10.00020480173 10.01049766401 51 1 51 1326 45526
+7	13508 1195 3027 131673 10.00020480173 10.01051766401 46 1 46 1081 33511
+8	14703 1290 3092 121145 10.00021480173 10.00968325882 50 1 50 1275 42925
+9	15993 1266 3153 131316 10.00022480173 10.01046766401 49 1 49 1225 40425
+10	17259 1270 3248 128166 10.00023480173 10.01022286228 47 1 47 1128 35720
+11	18529 939 3252 131553 10.00023480173 10.01049766401 35 1 35 630 14910
+12	19468 1235 3279 131649 10.00024480173 10.01051766401 46 1 46 1081 33511
+13	20703 1156 3283 120853 10.00024480173 10.00964325882 43 1 43 946 27434
+14	21859 1454 3350 131651 10.00025480173 10.01051766401 54 1 54 1485 53955
+15	23313 1291 3388 131413 10.00025480173 10.01047766401 48 1 48 1176 38024
+16	24604 1379 3494 131588 10.00027480173 10.01050766401 51 1 51 1326 45526
+17	25983 1321 3553 131440 10.00028480173 10.01048766401 49 1 49 1225 40425
+18	27304 1346 3577 131257 10.00028480173 10.01045766401 50 1 50 1275 42925
+19	28650 10410 3620 131852 10.00028480173 10.01053766401 370 160 280 61200 10259200
+20	39060 9670 3620 131852 10.00028480173 10.01053766401 370 4 7 1530 6412
+21	48730 1004 3620 131852 10.00028480173 10.01053766401 37 10 10 370 3700
+22	49734 1237 6238 131539 10.00047960346 10.01049766401 46 1 46 1081 33511
+23	50971 966 6240 131748 10.00047960346 10.01052766401 36 1 36 666 16206
+24	51937 1353 6539 128371 10.00048960346 10.01025286228 50 1 50 1275 42925
+25	53290 1542 13513 131659 10.00105920692 10.01051766401 57 1 57 1653 63365
+

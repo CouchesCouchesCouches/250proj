@@ -1,0 +1,240 @@
+version 2
+run Tictoc18-30-20201123-05:37:24-1858
+attr configname Tictoc18
+attr datetime 20201123-05:37:24
+attr experiment Tictoc18
+attr inifile omnetpp.ini
+attr iterationvars $N=16
+attr iterationvarsf N=16-
+attr measurement $N=16
+attr network Tictoc18
+attr processid 1858
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 30
+attr seedset 30
+itervar N 16
+param *.numCentralNodes 16
+
+statistic Tictoc18.tic[0] hopCount:stats
+field count 31
+field mean 168.64516129032
+field stddev 273.12860809359
+field min 2
+field max 1436
+field sum 5228
+field sqrsum 3119654
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[1] hopCount:stats
+field count 36
+field mean 242.13888888889
+field stddev 263.10651322532
+field min 2
+field max 1168
+field sum 8717
+field sqrsum 4533601
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[2] hopCount:stats
+field count 32
+field mean 240.9375
+field stddev 285.8900011227
+field min 1
+field max 1190
+field sum 7710
+field sqrsum 4391354
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[3] hopCount:stats
+field count 29
+field mean 140.93103448276
+field stddev 179.43202673087
+field min 1
+field max 605
+field sum 4087
+field sqrsum 1477469
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[4] hopCount:stats
+field count 39
+field mean 159.17948717949
+field stddev 173.87864367439
+field min 3
+field max 754
+field sum 6208
+field sqrsum 2137070
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[5] hopCount:stats
+field count 31
+field mean 68.548387096774
+field stddev 92.72678099653
+field min 1
+field max 345
+field sum 2125
+field sqrsum 403613
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[6] hopCount:stats
+field count 32
+field mean 82.1875
+field stddev 116.5516464505
+field min 1
+field max 587
+field sum 2630
+field sqrsum 637266
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[7] hopCount:stats
+field count 30
+field mean 62.933333333333
+field stddev 62.649508533908
+field min 4
+field max 242
+field sum 1888
+field sqrsum 232642
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[8] hopCount:stats
+field count 31
+field mean 63.064516129032
+field stddev 72.169677604874
+field min 3
+field max 323
+field sum 1955
+field sqrsum 279545
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[9] hopCount:stats
+field count 34
+field mean 61.5
+field stddev 58.029381272844
+field min 1
+field max 218
+field sum 2091
+field sqrsum 239721
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[10] hopCount:stats
+field count 44
+field mean 58.318181818182
+field stddev 75.369715936431
+field min 1
+field max 419
+field sum 2566
+field sqrsum 393910
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[11] hopCount:stats
+field count 39
+field mean 57.230769230769
+field stddev 67.714361975978
+field min 1
+field max 367
+field sum 2232
+field sqrsum 301978
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[12] hopCount:stats
+field count 32
+field mean 75.75
+field stddev 76.569597268148
+field min 1
+field max 369
+field sum 2424
+field sqrsum 365368
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[13] hopCount:stats
+field count 24
+field mean 177.95833333333
+field stddev 314.15926162803
+field min 1
+field max 1416
+field sum 4271
+field sqrsum 3030069
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[14] hopCount:stats
+field count 33
+field mean 144.18181818182
+field stddev 157.73780748156
+field min 1
+field max 576
+field sum 4758
+field sqrsum 1482216
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[15] hopCount:stats
+field count 28
+field mean 139.25
+field stddev 185.14011210732
+field min 1
+field max 713
+field sum 3899
+field sqrsum 1468411
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[16] hopCount:stats
+field count 30
+field mean 195.33333333333
+field stddev 232.91708356428
+field min 1
+field max 805
+field sum 5860
+field sqrsum 2717914
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[17] hopCount:stats
+field count 31
+field mean 102.25806451613
+field stddev 173.07935901236
+field min 1
+field max 732
+field sum 3170
+field sqrsum 1222852
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[18] hopCount:stats
+field count 24
+field mean 167.125
+field stddev 198.14867332165
+field min 2
+field max 722
+field sum 4011
+field sqrsum 1573385
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+statistic Tictoc18.tic[19] hopCount:stats
+field count 39
+field mean 175.66666666667
+field stddev 216.52365050514
+field min 1
+field max 985
+field sum 6851
+field sqrsum 2985027
+attr interpolationmode none
+attr source arrival
+attr title "hop count, stats"
+

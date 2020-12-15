@@ -1,0 +1,121 @@
+file 14679 1606109866                                           
+version 2
+run Tictoc18-30-20201123-05:37:24-1858
+attr configname Tictoc18
+attr datetime 20201123-05:37:24
+attr experiment Tictoc18
+attr inifile omnetpp.ini
+attr iterationvars $N=16
+attr iterationvarsf N=16-
+attr measurement $N=16
+attr network Tictoc18
+attr processid 1858
+attr repetition 2
+attr replication #2
+attr resultdir results
+attr runnumber 30
+attr seedset 30
+itervar N 16
+param *.numCentralNodes 16
+
+vector 0 Tictoc18.tic[6] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 1 Tictoc18.tic[15] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 2 Tictoc18.tic[19] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 3 Tictoc18.tic[4] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 4 Tictoc18.tic[14] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 5 Tictoc18.tic[2] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 6 Tictoc18.tic[11] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 7 Tictoc18.tic[8] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 8 Tictoc18.tic[1] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 9 Tictoc18.tic[10] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 10 Tictoc18.tic[12] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 11 Tictoc18.tic[16] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 12 Tictoc18.tic[0] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 13 Tictoc18.tic[9] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 14 Tictoc18.tic[13] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 15 Tictoc18.tic[7] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 16 Tictoc18.tic[17] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 17 Tictoc18.tic[5] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 18 Tictoc18.tic[3] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+vector 19 Tictoc18.tic[18] hopCount:vector ETV
+attr interpolationmode none
+attr source arrival
+attr title "hop count, vector"
+0	2908 560 10 81642 0.9 8164.1 32 1 587 2630 637266
+1	3468 483 19 80607 1.8 8060.6 28 1 713 3899 1468411
+2	3951 697 60 79394 5.9 7939.3 39 1 985 6851 2985027
+3	4648 702 356 78608 35.5 7860.7 39 3 754 6208 2137070
+4	5350 595 540 82558 53.9 8255.7 33 1 576 4758 1482216
+5	5945 572 682 75528 68.1 7552.7 32 1 1190 7710 4391354
+6	6517 665 755 79493 75.4 7949.2 39 1 367 2232 301978
+7	7182 552 1748 82632 174.7 8263.1 31 3 323 1955 279545
+8	7734 649 1823 81629 182.2 8162.8 36 2 1168 8717 4533601
+9	8383 783 1868 79348 186.7 7934.7 44 1 419 2566 393910
+10	9166 600 1902 79852 190.1 7985.1 32 1 369 2424 365368
+11	9766 573 2108 79384 210.7 7938.3 30 1 805 5860 2717914
+12	10339 579 2271 82087 227 8208.6 31 2 1436 5228 3119654
+13	10918 623 3347 82661 334.6 8266 34 1 218 2091 239721
+14	11541 448 3641 81315 364 8131.4 24 1 1416 4271 3030069
+15	11989 555 3677 79037 367.6 7903.6 30 4 242 1888 232642
+16	12544 574 3793 79147 379.2 7914.6 31 1 732 3170 1222852
+17	13118 561 8663 79067 866.2 7906.6 31 1 345 2125 403613
+18	13679 540 8665 79281 866.4 7928 29 1 605 4087 1477469
+19	14219 459 9644 82682 964.3 8268.1 24 2 722 4011 1573385
+

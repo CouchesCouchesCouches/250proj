@@ -1,0 +1,3278 @@
+Router1[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Repeater1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->EndNode15[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode2[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode3[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode4[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode15[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->EndNode7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->EndNode8[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->EndNode9[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->EndNode27[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode7[0]<--->Repeater2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode8[0]<--->Repeater3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode9[0]<--->Repeater4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode27[0]<--->Repeater5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Repeater1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->EndNode15[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode2[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode3[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode4[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode15[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->EndNode7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->EndNode8[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->EndNode9[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->EndNode27[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode7[0]<--->Repeater2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode8[0]<--->Repeater3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode9[0]<--->Repeater4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode27[0]<--->Repeater5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router2[0]
+REAL
+      0.75     -0.375 -0.0416667        0.5
+    -0.375          0          0  -0.208333
+-0.0416667          0          0      0.125
+       0.5  -0.208333      0.125       0.25
+IMAGINARY
+    0 -0.25 -0.05     0
+ 0.25     0     0  0.05
+ 0.05     0     0  0.25
+    0 -0.05 -0.25     0
+Router1[0]<--->HoM3[0]
+REAL
+       0.5  -0.157143  0.0357143       0.45
+ -0.157143      0.125      -0.05 -0.0357143
+ 0.0357143      -0.05          0  0.0571429
+      0.45 -0.0357143  0.0571429      0.375
+IMAGINARY
+          0  -0.0324675   -0.142857  -0.0916667
+  0.0324675           0 -0.00833333   0.0714286
+   0.142857  0.00833333           0    0.103896
+  0.0916667  -0.0714286   -0.103896           0
+Router1[0]<--->Router3[0]
+REAL
+        1 -0.333333     -0.25       0.5
+-0.333333         0         0     -0.25
+    -0.25         0         0 -0.166667
+      0.5     -0.25 -0.166667         0
+IMAGINARY
+   0  0.1    0    0
+-0.1    0 -0.5 -0.5
+   0  0.5    0  0.4
+   0  0.5 -0.4    0
+Router1[0]<--->Router4[0]
+REAL
+           0 -1.38778e-17         0.05          0.5
+-1.38778e-17         0.75            0         0.05
+        0.05            0            0          0.1
+         0.5         0.05          0.1         0.25
+IMAGINARY
+     0   0.25  0.125    0.2
+ -0.25      0    0.3 -0.125
+-0.125   -0.3      0  -0.25
+  -0.2  0.125   0.25      0
+Router1[0]<--->Router5[0]
+REAL
+         0 -0.0833333   0.166667        0.5
+-0.0833333          0          0   0.166667
+  0.166667          0          0   0.416667
+       0.5   0.166667   0.416667          1
+IMAGINARY
+         0 -0.0833333          0   0.166667
+ 0.0833333          0   0.333333   0.166667
+         0  -0.333333          0 -0.0833333
+ -0.166667  -0.166667  0.0833333          0
+Router1[0]<--->Repeater1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->HoM1[0]
+REAL
+      0.55 -0.0166667 -0.0681818        0.5
+-0.0166667          0          0  0.0681818
+-0.0681818          0          0  0.0166667
+       0.5  0.0681818  0.0166667       0.45
+IMAGINARY
+         0  0.0634675  -0.152941    -0.0625
+-0.0634675          0    -0.0625 -0.0529412
+  0.152941     0.0625          0   0.142415
+    0.0625  0.0529412  -0.142415          0
+Router2[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router1[0]
+REAL
+      0.75 -0.0416667     -0.375        0.5
+-0.0416667          0          0      0.125
+    -0.375          0          0  -0.208333
+       0.5      0.125  -0.208333       0.25
+IMAGINARY
+    0 -0.05 -0.25     0
+ 0.05     0     0  0.25
+ 0.25     0     0  0.05
+    0 -0.25 -0.05     0
+Router2[0]<--->EndNode3[0]
+REAL
+       0.5   0.166667 -0.0416667        0.5
+  0.166667          0          0   0.208333
+-0.0416667          0          0          0
+       0.5   0.208333          0        0.5
+IMAGINARY
+        0  0.166667  0.333333         0
+-0.166667         0      -0.5 -0.166667
+-0.333333       0.5         0 -0.333333
+        0  0.166667  0.333333         0
+Router2[0]<--->EndNode4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM1[0]
+REAL
+      0.55 -0.0681818 -0.0166667        0.5
+-0.0681818          0          0  0.0166667
+-0.0166667          0          0  0.0681818
+       0.5  0.0166667  0.0681818       0.45
+IMAGINARY
+         0  -0.152941  0.0634675    -0.0625
+  0.152941          0     0.0625   0.142415
+-0.0634675    -0.0625          0 -0.0529412
+    0.0625  -0.142415  0.0529412          0
+Router3[0]<--->HoM4[0]
+REAL
+  0.619048 -0.0384615  0.0454545        0.5
+-0.0384615          0          0 -0.0454545
+ 0.0454545          0          0  0.0384615
+       0.5 -0.0454545  0.0384615   0.380952
+IMAGINARY
+          0 -0.00125313  -0.0619048   0.0588235
+ 0.00125313           0   0.0882353   0.0380952
+  0.0619048  -0.0882353           0   0.0250627
+ -0.0588235  -0.0380952  -0.0250627           0
+Router3[0]<--->HoM5[0]
+REAL
+  0.411765  0.0826087  0.0543478   0.478261
+ 0.0826087          0 -0.0217391  0.0543478
+ 0.0543478 -0.0217391          0 -0.0173913
+  0.478261  0.0543478 -0.0173913   0.588235
+IMAGINARY
+         0   0.164683 -0.0173611 -0.0401786
+ -0.164683          0  -0.102679  -0.204861
+ 0.0173611   0.102679          0  0.0575397
+ 0.0401786   0.204861 -0.0575397          0
+Router3[0]<--->HoM6[0]
+REAL
+      0.5  -0.03125 -0.104779       0.5
+ -0.03125         0         0 0.0422794
+-0.104779         0         0  -0.03125
+      0.5 0.0422794  -0.03125       0.5
+IMAGINARY
+         0 -0.0454545   0.159091          0
+ 0.0454545          0          0  -0.159091
+ -0.159091          0          0  0.0454545
+         0   0.159091 -0.0454545          0
+Router3[0]<--->HoM7[0]
+REAL
+  0.642857 -0.0744048          0        0.5
+-0.0744048          0          0     -0.125
+         0          0          0 -0.0505952
+       0.5     -0.125 -0.0505952   0.357143
+IMAGINARY
+          0    0.190476   -0.210084    0.150502
+  -0.190476           0    0.041806 -0.00420168
+   0.210084   -0.041806           0   0.0238095
+  -0.150502  0.00420168  -0.0238095           0
+Router3[0]<--->Router4[0]
+REAL
+        0         0  0.166667       0.5
+        0         0         0 -0.333333
+ 0.166667         0         0 -0.166667
+      0.5 -0.333333 -0.166667         1
+IMAGINARY
+    0     0  0.25     0
+    0     0   0.5 -0.25
+-0.25  -0.5     0     0
+    0  0.25     0     0
+Router5[0]<--->Router1[0]
+REAL
+         0   0.166667 -0.0833333        0.5
+  0.166667          0          0   0.416667
+-0.0833333          0          0   0.166667
+       0.5   0.416667   0.166667          1
+IMAGINARY
+         0          0 -0.0833333   0.166667
+         0          0  -0.333333 -0.0833333
+ 0.0833333   0.333333          0   0.166667
+ -0.166667  0.0833333  -0.166667          0
+Router5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router2[0]
+REAL
+  0.666667       -0.4 -0.0666667        0.5
+      -0.4          0          0  -0.233333
+-0.0666667          0          0        0.1
+       0.5  -0.233333        0.1   0.333333
+IMAGINARY
+         0      -0.15      -0.05 -0.0833333
+      0.15          0 -0.0833333       0.05
+      0.05  0.0833333          0       0.15
+ 0.0833333      -0.05      -0.15          0
+Router1[0]<--->HoM3[0]
+REAL
+       0.4  -0.106061 -0.0727273        0.5
+ -0.106061          0          0  0.0272727
+-0.0727273          0          0  0.0606061
+       0.5  0.0272727  0.0606061        0.6
+IMAGINARY
+         0 -0.0521978 -0.0192308 -0.0277778
+ 0.0521978          0  0.0277778 -0.0192308
+ 0.0192308 -0.0277778          0  0.0906593
+ 0.0277778  0.0192308 -0.0906593          0
+Router1[0]<--->Router3[0]
+REAL
+         1  -0.190476 -0.0833333        0.5
+ -0.190476          0          0 -0.0833333
+-0.0833333          0          0  0.0238095
+       0.5 -0.0833333  0.0238095          0
+IMAGINARY
+   0  0.1    0 -0.1
+-0.1    0 -0.4 -0.5
+   0  0.4    0  0.4
+ 0.1  0.5 -0.4    0
+Router1[0]<--->Router4[0]
+REAL
+   0.5 -0.075   0.05    0.5
+-0.075      0      0   0.05
+  0.05      0      0  0.175
+   0.5   0.05  0.175    0.5
+IMAGINARY
+     0    0.3  0.075    0.2
+  -0.3      0    0.3 -0.175
+-0.075   -0.3      0   -0.2
+  -0.2  0.175    0.2      0
+Router1[0]<--->Router5[0]
+REAL
+         0 -0.0178571   0.261905   0.228571
+-0.0178571          0   0.128571  0.0952381
+  0.261905   0.128571          0   0.232143
+  0.228571  0.0952381   0.232143          1
+IMAGINARY
+         0       0.05  0.0666667   0.166667
+     -0.05          0   0.333333   0.233333
+-0.0666667  -0.333333          0       0.05
+ -0.166667  -0.233333      -0.05          0
+Router1[0]<--->Repeater1[0]
+REAL
+       0.5 -0.0833333  -0.333333        0.5
+-0.0833333          0          0  -0.166667
+ -0.333333          0          0  -0.416667
+       0.5  -0.166667  -0.416667        0.5
+IMAGINARY
+        0     -0.05      0.05  0.130952
+     0.05         0 -0.202381      0.05
+    -0.05  0.202381         0     -0.05
+-0.130952     -0.05      0.05         0
+Router2[0]<--->HoM1[0]
+REAL
+      0.52 -0.0777778 -0.0603448       0.45
+-0.0777778          0      -0.05  0.0603448
+-0.0603448      -0.05          0 -0.0222222
+      0.45  0.0603448 -0.0222222       0.48
+IMAGINARY
+         0  0.0239234  -0.142105 -0.0380952
+-0.0239234          0 -0.0619048 -0.0421053
+  0.142105  0.0619048          0   0.160287
+ 0.0380952  0.0421053  -0.160287          0
+Router2[0]<--->Router5[0]
+REAL
+  0.5 0.125     0   0.5
+0.125     0     0   0.5
+    0     0     0 0.375
+  0.5   0.5 0.375   0.5
+IMAGINARY
+         0       -0.3        0.3  0.0833333
+       0.3          0 -0.0833333       -0.2
+      -0.3  0.0833333          0        0.2
+-0.0833333        0.2       -0.2          0
+Router2[0]<--->Router1[0]
+REAL
+  0.666667 -0.0666667       -0.4        0.5
+-0.0666667          0          0        0.1
+      -0.4          0          0  -0.233333
+       0.5        0.1  -0.233333   0.333333
+IMAGINARY
+         0      -0.05      -0.15 -0.0833333
+      0.05          0  0.0833333       0.15
+      0.15 -0.0833333          0       0.05
+ 0.0833333      -0.15      -0.05          0
+Router2[0]<--->EndNode3[0]
+REAL
+  0.5     0 -0.05   0.5
+    0     0     0  0.05
+-0.05     0     0     0
+  0.5  0.05     0   0.5
+IMAGINARY
+         0      0.125   0.263889      0.125
+    -0.125          0     -0.375 -0.0138889
+ -0.263889      0.375          0     -0.375
+    -0.125  0.0138889      0.375          0
+Router2[0]<--->EndNode4[0]
+REAL
+      0.4  0.416667       0.2       0.5
+ 0.416667         0         0       0.3
+      0.2         0         0 0.0833333
+      0.5       0.3 0.0833333       0.6
+IMAGINARY
+         0   0.233333  -0.151515       0.25
+ -0.233333          0       0.25 -0.0151515
+  0.151515      -0.25          0 -0.0666667
+     -0.25  0.0151515  0.0666667          0
+Router2[0]<--->EndNode5[0]
+REAL
+0.625 0.375  0.25   0.5
+0.375     0     0  0.25
+ 0.25     0     0 0.125
+  0.5  0.25 0.125 0.375
+IMAGINARY
+         0     -0.125 -0.0416667  0.0833333
+     0.125          0      -0.25  -0.208333
+ 0.0416667       0.25          0      0.375
+-0.0833333   0.208333     -0.375          0
+Router3[0]<--->Router1[0]
+REAL
+         1 -0.0833333  -0.190476        0.5
+-0.0833333          0          0  0.0238095
+ -0.190476          0          0 -0.0833333
+       0.5  0.0238095 -0.0833333          0
+IMAGINARY
+   0    0  0.1 -0.1
+   0    0  0.4  0.4
+-0.1 -0.4    0 -0.5
+ 0.1 -0.4  0.5    0
+Router3[0]<--->HoM1[0]
+REAL
+   0.541667   -0.110345  -0.0527778        0.45
+  -0.110345           0 5.55112e-17  0.00277778
+ -0.0527778 5.55112e-17           0   0.0103448
+       0.45  0.00277778   0.0103448    0.458333
+IMAGINARY
+         0     -0.125  0.0318182 -0.0380952
+     0.125          0  0.0619048   0.168182
+-0.0318182 -0.0619048          0     -0.025
+ 0.0380952  -0.168182      0.025          0
+Router3[0]<--->HoM4[0]
+REAL
+  0.576923 -0.0485893 -0.0034965        0.5
+-0.0485893          0          0  -0.041958
+-0.0034965          0          0  0.0031348
+       0.5  -0.041958  0.0031348   0.423077
+IMAGINARY
+          0  -0.0208333  -0.0246212 -0.00274725
+  0.0208333           0   0.0741758   0.0662879
+  0.0246212  -0.0741758           0  -0.0208333
+ 0.00274725  -0.0662879   0.0208333           0
+Router3[0]<--->HoM5[0]
+REAL
+ 0.428571 0.0643939 0.0416667       0.5
+0.0643939         0         0 0.0416667
+0.0416667         0         0 0.0189394
+      0.5 0.0416667 0.0189394  0.571429
+IMAGINARY
+         0    0.15528 -0.0600414 -0.0275689
+  -0.15528          0 -0.0513784  -0.179089
+ 0.0600414  0.0513784          0  0.0838509
+ 0.0275689   0.179089 -0.0838509          0
+Router3[0]<--->HoM6[0]
+REAL
+  0.473684  0.0681818 0.00974026        0.5
+ 0.0681818          0          0  0.0811688
+0.00974026          0          0  0.0227273
+       0.5  0.0811688  0.0227273   0.526316
+IMAGINARY
+          0 -0.00925926    0.145833   0.0217949
+ 0.00925926           0   0.0551282   -0.145833
+  -0.145833  -0.0551282           0  0.00925926
+ -0.0217949    0.145833 -0.00925926           0
+Router3[0]<--->HoM7[0]
+REAL
+  0.666667 -0.0763889 -0.0328283        0.5
+-0.0763889          0          0 -0.0782828
+-0.0328283          0          0 -0.0347222
+       0.5 -0.0782828 -0.0347222   0.333333
+IMAGINARY
+          0    0.135417   -0.161932    0.101852
+  -0.135417           0  0.00925926  -0.0255682
+   0.161932 -0.00925926           0   0.0520833
+  -0.101852   0.0255682  -0.0520833           0
+Router3[0]<--->Router4[0]
+REAL
+         0 -0.0833333   0.166667        0.5
+-0.0833333          0          0  -0.333333
+  0.166667          0          0 -0.0833333
+       0.5  -0.333333 -0.0833333          1
+IMAGINARY
+         0 -0.0833333   0.333333       0.25
+ 0.0833333          0       0.25  -0.166667
+ -0.333333      -0.25          0 -0.0833333
+     -0.25   0.166667  0.0833333          0
+Router5[0]<--->Router1[0]
+REAL
+        0      0.25 0.0416667       0.5
+     0.25         0         0  0.291667
+0.0416667         0         0 0.0833333
+      0.5  0.291667 0.0833333         1
+IMAGINARY
+         0          0 -0.0833333   0.166667
+         0          0  -0.333333 -0.0833333
+ 0.0833333   0.333333          0   0.166667
+ -0.166667  0.0833333  -0.166667          0
+Router5[0]<--->Router2[0]
+REAL
+  0.5     0 0.125   0.5
+    0     0     0 0.375
+0.125     0     0   0.5
+  0.5 0.375   0.5   0.5
+IMAGINARY
+         0        0.3       -0.3  0.0833333
+      -0.3          0  0.0833333        0.2
+       0.3 -0.0833333          0       -0.2
+-0.0833333       -0.2        0.2          0
+Router5[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router1[0]
+REAL
+   0.5   0.05 -0.075    0.5
+  0.05      0      0  0.175
+-0.075      0      0   0.05
+   0.5  0.175   0.05    0.5
+IMAGINARY
+     0  0.075    0.3    0.2
+-0.075      0   -0.3   -0.2
+  -0.3    0.3      0 -0.175
+  -0.2    0.2  0.175      0
+Router4[0]<--->Router3[0]
+REAL
+         0   0.166667 -0.0833333        0.5
+  0.166667          0          0 -0.0833333
+-0.0833333          0          0  -0.333333
+       0.5 -0.0833333  -0.333333          1
+IMAGINARY
+         0   0.333333 -0.0833333       0.25
+ -0.333333          0      -0.25 -0.0833333
+ 0.0833333       0.25          0  -0.166667
+     -0.25  0.0833333   0.166667          0
+Router4[0]<--->EndNode15[0]
+REAL
+        0 -0.333333  0.166667       0.5
+-0.333333         0         0 -0.333333
+ 0.166667         0         0  0.166667
+      0.5 -0.333333  0.166667         1
+IMAGINARY
+           0     0.166667   -0.0833333            0
+   -0.166667            0         -0.5   -0.0833333
+   0.0833333          0.5            0 -1.38778e-17
+           0    0.0833333  1.38778e-17            0
+Repeater1[0]<--->Router1[0]
+REAL
+       0.5  -0.333333 -0.0833333        0.5
+ -0.333333          0          0  -0.416667
+-0.0833333          0          0  -0.166667
+       0.5  -0.416667  -0.166667        0.5
+IMAGINARY
+        0      0.05     -0.05  0.130952
+    -0.05         0  0.202381     -0.05
+     0.05 -0.202381         0      0.05
+-0.130952      0.05     -0.05         0
+Repeater1[0]<--->HoM2[0]
+REAL
+       0.25  -0.0686275   0.0147059         0.5
+ -0.0686275   0.0833333           0   0.0147059
+  0.0147059           0 2.77556e-17   0.0980392
+        0.5   0.0147059   0.0980392    0.666667
+IMAGINARY
+         0 -0.0277778 -0.0961538  -0.114583
+ 0.0277778          0  0.0520833  0.0961538
+ 0.0961538 -0.0520833          0  0.0277778
+  0.114583 -0.0961538 -0.0277778          0
+EndNode1[0]<--->HoM2[0]
+REAL
+    0.272727 -6.93889e-18   -0.0833333          0.5
+-6.93889e-18            0            0    0.0833333
+  -0.0833333            0            0  6.93889e-18
+         0.5    0.0833333  6.93889e-18     0.727273
+IMAGINARY
+         0 -0.0961538 -0.0277778  -0.114583
+ 0.0961538          0 -0.0520833  0.0277778
+ 0.0277778  0.0520833          0  0.0961538
+  0.114583 -0.0277778 -0.0961538          0
+EndNode2[0]<--->HoM3[0]
+REAL
+       0.4 -0.0727273  -0.106061        0.5
+-0.0727273          0          0  0.0606061
+ -0.106061          0          0  0.0272727
+       0.5  0.0606061  0.0272727        0.6
+IMAGINARY
+         0 -0.0192308 -0.0521978 -0.0277778
+ 0.0192308          0 -0.0277778  0.0906593
+ 0.0521978  0.0277778          0 -0.0192308
+ 0.0277778 -0.0906593  0.0192308          0
+EndNode3[0]<--->Router2[0]
+REAL
+  0.5 -0.05     0   0.5
+-0.05     0     0     0
+    0     0     0  0.05
+  0.5     0  0.05   0.5
+IMAGINARY
+         0   0.263889      0.125      0.125
+ -0.263889          0      0.375     -0.375
+    -0.125     -0.375          0 -0.0138889
+    -0.125      0.375  0.0138889          0
+EndNode4[0]<--->Router2[0]
+REAL
+      0.4       0.2  0.416667       0.5
+      0.2         0         0 0.0833333
+ 0.416667         0         0       0.3
+      0.5 0.0833333       0.3       0.6
+IMAGINARY
+         0  -0.151515   0.233333       0.25
+  0.151515          0      -0.25 -0.0666667
+ -0.233333       0.25          0 -0.0151515
+     -0.25  0.0666667  0.0151515          0
+EndNode5[0]<--->Router2[0]
+REAL
+0.625  0.25 0.375   0.5
+ 0.25     0     0 0.125
+0.375     0     0  0.25
+  0.5 0.125  0.25 0.375
+IMAGINARY
+         0 -0.0416667     -0.125  0.0833333
+ 0.0416667          0       0.25      0.375
+     0.125      -0.25          0  -0.208333
+-0.0833333     -0.375   0.208333          0
+EndNode15[0]<--->Router4[0]
+REAL
+        0  0.166667 -0.333333       0.5
+ 0.166667         0         0  0.166667
+-0.333333         0         0 -0.333333
+      0.5  0.166667 -0.333333         1
+IMAGINARY
+           0   -0.0833333     0.166667            0
+   0.0833333            0          0.5 -1.38778e-17
+   -0.166667         -0.5            0   -0.0833333
+           0  1.38778e-17    0.0833333            0
+Repeater2[0]<--->HoM4[0]
+REAL
+  0.576923 -0.0034965 -0.0485893        0.5
+-0.0034965          0          0  0.0031348
+-0.0485893          0          0  -0.041958
+       0.5  0.0031348  -0.041958   0.423077
+IMAGINARY
+          0  -0.0246212  -0.0208333 -0.00274725
+  0.0246212           0  -0.0741758  -0.0208333
+  0.0208333   0.0741758           0   0.0662879
+ 0.00274725   0.0208333  -0.0662879           0
+Repeater2[0]<--->EndNode7[0]
+REAL
+       0.5  -0.214286   0.160714        0.5
+ -0.214286          0          0 -0.0892857
+  0.160714          0          0   0.285714
+       0.5 -0.0892857   0.285714        0.5
+IMAGINARY
+         0      0.125 -0.0833333  -0.208333
+    -0.125          0 -0.0416667  0.0833333
+ 0.0833333  0.0416667          0     -0.125
+  0.208333 -0.0833333      0.125          0
+Repeater3[0]<--->HoM5[0]
+REAL
+ 0.428571 0.0416667 0.0643939       0.5
+0.0416667         0         0 0.0189394
+0.0643939         0         0 0.0416667
+      0.5 0.0189394 0.0416667  0.571429
+IMAGINARY
+         0 -0.0600414    0.15528 -0.0275689
+ 0.0600414          0  0.0513784  0.0838509
+  -0.15528 -0.0513784          0  -0.179089
+ 0.0275689 -0.0838509   0.179089          0
+Repeater3[0]<--->EndNode8[0]
+REAL
+         1 -0.0166667      -0.25        0.5
+-0.0166667          0          0 -0.0833333
+     -0.25          0          0  -0.316667
+       0.5 -0.0833333  -0.316667          0
+IMAGINARY
+        0       0.3      -0.5  0.166667
+     -0.3         0 -0.333333         0
+      0.5  0.333333         0       0.2
+-0.166667         0      -0.2         0
+Repeater4[0]<--->HoM6[0]
+REAL
+  0.473684 0.00974026  0.0681818        0.5
+0.00974026          0          0  0.0227273
+ 0.0681818          0          0  0.0811688
+       0.5  0.0227273  0.0811688   0.526316
+IMAGINARY
+          0    0.145833 -0.00925926   0.0217949
+  -0.145833           0  -0.0551282  0.00925926
+ 0.00925926   0.0551282           0   -0.145833
+ -0.0217949 -0.00925926    0.145833           0
+Repeater4[0]<--->EndNode9[0]
+REAL
+       0.8 -0.0833333 -0.0833333        0.5
+-0.0833333          0          0 -0.0833333
+-0.0833333          0          0 -0.0833333
+       0.5 -0.0833333 -0.0833333        0.2
+IMAGINARY
+         0  0.0642857 -0.0714286       -0.4
+-0.0642857          0        0.1   0.142857
+ 0.0714286       -0.1          0  -0.135714
+       0.4  -0.142857   0.135714          0
+Repeater5[0]<--->HoM7[0]
+REAL
+  0.666667 -0.0328283 -0.0763889        0.5
+-0.0328283          0          0 -0.0347222
+-0.0763889          0          0 -0.0782828
+       0.5 -0.0347222 -0.0782828   0.333333
+IMAGINARY
+          0   -0.161932    0.135417    0.101852
+   0.161932           0 -0.00925926   0.0520833
+  -0.135417  0.00925926           0  -0.0255682
+  -0.101852  -0.0520833   0.0255682           0
+Repeater5[0]<--->EndNode27[0]
+REAL
+     0.25 -0.208333         0       0.5
+-0.208333         0         0 -0.166667
+        0         0         0 0.0416667
+      0.5 -0.166667 0.0416667      0.75
+IMAGINARY
+         0 -0.0277778  0.0833333       -0.1
+ 0.0277778          0        0.2 -0.0833333
+-0.0833333       -0.2          0  0.0277778
+       0.1  0.0833333 -0.0277778          0
+EndNode7[0]<--->Repeater2[0]
+REAL
+       0.5   0.160714  -0.214286        0.5
+  0.160714          0          0   0.285714
+ -0.214286          0          0 -0.0892857
+       0.5   0.285714 -0.0892857        0.5
+IMAGINARY
+         0 -0.0833333      0.125  -0.208333
+ 0.0833333          0  0.0416667     -0.125
+    -0.125 -0.0416667          0  0.0833333
+  0.208333      0.125 -0.0833333          0
+EndNode8[0]<--->Repeater3[0]
+REAL
+         1      -0.25 -0.0166667        0.5
+     -0.25          0          0  -0.316667
+-0.0166667          0          0 -0.0833333
+       0.5  -0.316667 -0.0833333          0
+IMAGINARY
+        0      -0.5       0.3  0.166667
+      0.5         0  0.333333       0.2
+     -0.3 -0.333333         0         0
+-0.166667      -0.2         0         0
+EndNode9[0]<--->Repeater4[0]
+REAL
+       0.8 -0.0833333 -0.0833333        0.5
+-0.0833333          0          0 -0.0833333
+-0.0833333          0          0 -0.0833333
+       0.5 -0.0833333 -0.0833333        0.2
+IMAGINARY
+         0 -0.0714286  0.0642857       -0.4
+ 0.0714286          0       -0.1  -0.135714
+-0.0642857        0.1          0   0.142857
+       0.4   0.135714  -0.142857          0
+EndNode27[0]<--->Repeater5[0]
+REAL
+     0.25         0 -0.208333       0.5
+        0         0         0 0.0416667
+-0.208333         0         0 -0.166667
+      0.5 0.0416667 -0.166667      0.75
+IMAGINARY
+         0  0.0833333 -0.0277778       -0.1
+-0.0833333          0       -0.2  0.0277778
+ 0.0277778        0.2          0 -0.0833333
+       0.1 -0.0277778  0.0833333          0
+Router1[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Repeater1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->EndNode15[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode2[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode3[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode4[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode15[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->EndNode7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->EndNode8[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->EndNode9[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->EndNode27[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode7[0]<--->Repeater2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode8[0]<--->Repeater3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode9[0]<--->Repeater4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode27[0]<--->Repeater5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Repeater1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->EndNode15[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode2[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode3[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode4[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode15[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->EndNode7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->EndNode8[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->EndNode9[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->EndNode27[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode7[0]<--->Repeater2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode8[0]<--->Repeater3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode9[0]<--->Repeater4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode27[0]<--->Repeater5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router1[0]<--->Repeater1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router2[0]<--->EndNode5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router3[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router5[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->Router3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Router4[0]<--->EndNode15[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->Router1[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode1[0]<--->HoM2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode2[0]<--->HoM3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode3[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode4[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode5[0]<--->Router2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode15[0]<--->Router4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->HoM4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater2[0]<--->EndNode7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->HoM5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater3[0]<--->EndNode8[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->HoM6[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater4[0]<--->EndNode9[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->HoM7[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+Repeater5[0]<--->EndNode27[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode7[0]<--->Repeater2[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode8[0]<--->Repeater3[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode9[0]<--->Repeater4[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+EndNode27[0]<--->Repeater5[0]
+REAL
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+IMAGINARY
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan
+-nan -nan -nan -nan

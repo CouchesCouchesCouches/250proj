@@ -1,0 +1,50 @@
+version 2
+run General-0-20201125-05:03:37-2474
+attr configname General
+attr datetime 20201125-05:03:37
+attr experiment General
+attr inifile three_HoM_star.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Three_HoM_star
+attr processid 2474
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.EndToEndConnection true
+param **.link_tomography false
+
+scalar Three_HoM_star.EndNode[0].qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Three_HoM_star.EndNode[1].qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Three_HoM_star.EndNode[2].qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Three_HoM_star.HoM[0].BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Three_HoM_star.HoM[0].BSA Num_Bell_state:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Three_HoM_star.HoM[1].BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Three_HoM_star.HoM[1].BSA Num_Bell_state:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Three_HoM_star.HoM[2].BSA num_trial:mean -nan
+attr interpolationmode sample-hold
+attr title "The average number of BSA trials to generate one Bell pair, mean"
+scalar Three_HoM_star.HoM[2].BSA Num_Bell_state:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+scalar Three_HoM_star.Router[0].qrsa.re actual_res:max nan
+attr interpolationmode sample-hold
+attr title "actual number of resource, max"
+

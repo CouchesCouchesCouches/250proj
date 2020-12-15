@@ -1,0 +1,113 @@
+file 10474 1606292735                                           
+version 2
+run EntanglementSwapping_Realistic_Layer2_Star_Sep_Test-0-20201125-08:25:09-3154
+attr configname EntanglementSwapping_Realistic_Layer2_Star_Sep_Test
+attr datetime 20201125-08:25:09
+attr experiment EntanglementSwapping_Realistic_Layer2_Star_Sep_Test
+attr inifile quisp_tutorial.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Realistic_Layer2_Star_Sep
+attr processid 3154
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.EndToEndConnection true
+param **.Initial_notification_timing_buffer "10 s"
+
+vector 0 Realistic_Layer2_Star_Sep.Router2[0].qnic_r[3].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 1 Realistic_Layer2_Star_Sep.HoM4[0].BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 2 Realistic_Layer2_Star_Sep.Router2[0].qnic_r[1].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 3 Realistic_Layer2_Star_Sep.HoM5[0].BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 4 Realistic_Layer2_Star_Sep.HoM7[0].BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 5 Realistic_Layer2_Star_Sep.HoM1[0].BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 6 Realistic_Layer2_Star_Sep.EndNode7[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 7 Realistic_Layer2_Star_Sep.Router5[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 8 Realistic_Layer2_Star_Sep.Repeater5[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 9 Realistic_Layer2_Star_Sep.Router1[0].qnic_r[1].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 10 Realistic_Layer2_Star_Sep.Router1[0].qnic_r[3].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 11 Realistic_Layer2_Star_Sep.HoM2[0].BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 12 Realistic_Layer2_Star_Sep.EndNode8[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 13 Realistic_Layer2_Star_Sep.Repeater4[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 14 Realistic_Layer2_Star_Sep.HoM3[0].BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 15 Realistic_Layer2_Star_Sep.Router1[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 16 Realistic_Layer2_Star_Sep.Router1[0].qnic_r[2].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 17 Realistic_Layer2_Star_Sep.HoM6[0].BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 18 Realistic_Layer2_Star_Sep.Router3[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 19 Realistic_Layer2_Star_Sep.Router4[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 20 Realistic_Layer2_Star_Sep.Router5[0].qnic_r[1].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 21 Realistic_Layer2_Star_Sep.Router2[0].qnic_r[2].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+vector 22 Realistic_Layer2_Star_Sep.Router2[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+0	4593 240 579 8561 10.00004803323 10.00293623261 10 1 10 55 385
+1	4833 249 850 3227 10.000105673106 10.000592692424 10 1 10 55 385
+2	5082 249 1014 9288 10.000128819938 10.00333229907 10 1 10 55 385
+3	5331 251 1057 2729 10.000135279752 10.000485839256 10 1 10 55 385
+4	5582 250 1221 4076 10.000154493044 10.00087246522 10 1 10 55 385
+5	5832 250 1228 4921 10.000155279752 10.001162238016 10 1 10 55 385
+6	6082 249 1311 7157 10.000172049845 10.002204348915 10 1 10 55 385
+7	6331 251 1318 9459 10.000172919627 10.003437517762 10 1 10 55 385
+8	6582 250 1480 8888 10.000200869782 10.003106088474 10 1 10 55 385
+9	6832 251 1589 8122 10.000220952857 10.002704764285 10 1 10 55 385
+10	7083 260 1693 8585 10.000249772794 10.00294886397 10 1 10 55 385
+11	7343 261 1789 7004 10.000278986086 10.002142902602 10 1 10 55 385
+12	7604 260 1796 9833 10.000281656491 10.00383312982 10 1 10 55 385
+13	7864 261 1852 7060 10.000291263136 10.002165052544 10 1 10 55 385
+14	8125 260 1906 9275 10.000298199378 10.003330193158 10 1 10 55 385
+15	8385 259 1934 9578 10.000301739565 10.003512176955 10 1 10 55 385
+16	8644 261 2165 9754 10.000340166149 10.003721329192 10 1 10 55 385
+17	8905 261 2315 4498 10.000369772796 10.000999318388 10 1 10 55 385
+18	9166 261 2379 9608 10.000384265838 10.003537063352 10 1 10 55 385
+19	9427 261 2422 9990 10.000392132919 10.004505595028 10 1 10 55 385
+20	9688 261 2492 9734 10.000411346211 10.003702115899 10 1 10 55 385
+21	9949 261 3380 9620 10.000638426584 10.003537972176 10 1 10 55 385
+22	10210 263 4132 10265 10.000882526273 10.00692526273 10 1 10 55 385
+

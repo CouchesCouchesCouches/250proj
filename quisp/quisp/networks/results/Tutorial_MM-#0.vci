@@ -1,0 +1,25 @@
+file 871 1606280178                                             
+version 2
+run Tutorial_MM-0-20201125-04:54:15-2381
+attr configname Tutorial_MM
+attr datetime 20201125-04:54:15
+attr experiment Tutorial_MM
+attr inifile quisp_tutorial.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Linear_One_MM
+attr processid 2381
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.EndToEndConnection true
+param **.Initial_notification_timing_buffer "10 s"
+
+vector 0 Linear_One_MM.EndNode[0].qnic_r[0].internal_hom.BSA Num_Bell_state:vector ETV
+attr interpolationmode sample-hold
+attr title "actual number of resource, vector"
+0	630 240 102 437 10.000509740086 10.002468180602 10 1 10 55 385
+

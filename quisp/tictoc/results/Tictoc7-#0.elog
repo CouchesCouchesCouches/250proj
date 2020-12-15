@@ -1,0 +1,111 @@
+E # 0 t 0 m 1 ce -1 msg -1
+SB v 1286 rid Tictoc7-0-20201121-01:28:54-1801 b 1000
+KF p -1 c "" s ""
+MC id 1 c omnetpp::cModule t Tictoc7 n Tictoc7 cm 1
+MS id 1 d ""
+MC id 2 c Txc7 t Txc7 pid 1 n tic
+GC m 2 g 0 n in o 0
+GC m 2 g 3 n out o 1
+MS id 2 d i=block/routing,cyan
+MC id 3 c Txc7 t Txc7 pid 1 n toc
+GC m 3 g 0 n in o 0
+GC m 3 g 3 n out o 1
+MS id 3 d i=block/routing,gold
+CC sm 2 sg 3 dm 3 dg 0
+CS sm 2 sg 3 d ""
+CC sm 3 sg 3 dm 2 dg 0
+CS sm 3 sg 3 d ""
+MB sm 1 tm 2 m initialize(0)
+CM id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe -1
+- INFO (Txc7)Tictoc7.tic:Scheduling first send to t=5.0s
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe 0
+ES t 5
+CM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe -1
+ME
+MB sm 1 tm 3 m initialize(0)
+CM id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event pe -1
+ME
+
+E # 1 t 5 m 2 ce 0 msg 0
+- INFO:Wait period is over, sending back message
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 0
+SH sm 2 sg 3 pd 0.1
+ES t 5.1
+CL id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 1 cid 3
+
+E # 2 t 5.1 m 3 ce 1 msg 1
+- INFO:Message arrived, starting to wait 2.709121117056 secs...
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event pe 0
+ES t 7.809121117056
+
+E # 3 t 7.809121117056 m 3 ce 2 msg 2
+- INFO:Wait period is over, sending back message
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 2
+SH sm 3 sg 3 pd 0.1
+ES t 7.909121117056
+CL id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 3 cid 3
+
+E # 4 t 7.909121117056 m 2 ce 3 msg 1
+- INFO:Message arrived, starting to wait 2.769669394412 secs...
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe 1
+ES t 10.678790511468
+
+E # 5 t 10.678790511468 m 2 ce 4 msg 0
+- INFO:Wait period is over, sending back message
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 4
+SH sm 2 sg 3 pd 0.1
+ES t 10.778790511468
+CL id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 5 cid 3
+
+E # 6 t 10.778790511468 m 3 ce 5 msg 1
+- INFO:Message arrived, starting to wait 3.719886709309 secs...
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event pe 3
+ES t 14.498677220777
+
+E # 7 t 14.498677220777 m 3 ce 6 msg 2
+- INFO:Wait period is over, sending back message
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 6
+SH sm 3 sg 3 pd 0.1
+ES t 14.598677220777
+CL id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 7 cid 3
+
+E # 8 t 14.598677220777 m 2 ce 7 msg 1
+- INFO:Message arrived, starting to wait 2.93101927918 secs...
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe 5
+ES t 17.529696499957
+
+E # 9 t 17.529696499957 m 2 ce 8 msg 0
+- INFO:Wait period is over, sending back message
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 8
+SH sm 2 sg 3 pd 0.1
+ES t 17.629696499957
+CL id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 9 cid 3
+
+E # 10 t 17.629696499957 m 3 ce 9 msg 1
+- INFO:Message arrived, starting to wait 2.089757553678 secs...
+BS id 2 tid 2 eid 2 etid 2 c omnetpp::cMessage n event pe 7
+ES t 19.719454053635
+
+E # 11 t 19.719454053635 m 3 ce 10 msg 2
+- INFO:Wait period is over, sending back message
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 10
+SH sm 3 sg 3 pd 0.1
+ES t 19.819454053635
+CL id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 11 cid 3
+
+E # 12 t 19.819454053635 m 2 ce 11 msg 1
+- INFO:Message arrived, starting to wait 6.670573266109 secs...
+BS id 0 tid 0 eid 0 etid 0 c omnetpp::cMessage n event pe 9
+ES t 26.490027319744
+
+E # 13 t 26.490027319744 m 2 ce 12 msg 0
+- INFO:Wait period is over, sending back message
+BS id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 12
+SH sm 2 sg 3 pd 0.1
+ES t 26.590027319744
+CL id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 13 cid 3
+
+E # 14 t 26.590027319744 m 3 ce 13 msg 1
+- INFO:"Losing" message
+DM id 1 tid 1 eid 1 etid 1 c omnetpp::cMessage n tictocMsg pe 14
+SE e 0 c 13 m "No more events, simulation completed -- at t=26.590027319744s, event #14"
